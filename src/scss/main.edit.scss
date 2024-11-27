@@ -1,0 +1,32 @@
+.header__desktop-top,
+.menu-top,
+.scrollTopBtn{
+  z-index: 9999;
+}
+
+.documents-block__td-title,
+.price-details__td-title{
+  position: relative;
+}
+
+// text-block_float
+.text-block_float .text-container .nc-ckeditor-inline{
+  display: block!important;
+}
+
+// news
+.news-inner .img-container,
+.text-block_float .img-container{
+  position: relative;
+  z-index: 1;
+}
+
+.news-inner .text .nc-ckeditor-inline{
+  display: block!important;
+}
+
+// catalog, product
+.catalog__price .nc-ckeditor-inline,
+.product__price .nc-ckeditor-inline{
+  width: auto;
+}

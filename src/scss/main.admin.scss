@@ -1,0 +1,681 @@
+@import '_helpers/mixins';
+
+/*==========  variables  ==========*/
+:root {
+  --color-admin-text-400: #727272;
+  --color-admin-text-600: #212121;
+
+  --color-admin-primary-200: #f2f5f7;
+  --color-admin-primary-300: #f2f5f7;
+  --color-admin-primary-400: #f7fbfe;
+  --color-admin-primary-500: #2196f3;
+  --color-admin-primary-600: #1a87c2;
+
+  --color-admin-line-100: rgba(0, 0, 0, 0.05);
+  --color-admin-line-200: #DADADA;
+  --color-admin-line-600: #3C7EA4;
+
+  --green: #00cc00;
+  --red-600: #ff5400;
+  --red-800: #d9534f;
+}
+/*==========  /variables  ==========*/
+
+/*==========  ui elements  ==========*/
+blockquote{
+  margin-top: 0;
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 3px solid var(--color-admin-line-100);
+  font-style: italic;
+
+  p:last-child{
+    margin-bottom: 0;
+  }
+}
+
+.button,
+.button2,
+.button3{
+  display: inline-block;
+  color: #fff!important;
+  font-size: 12px;
+  padding: 4px 10px;
+  background-color: var(--color-admin-primary-600);
+}
+
+.hidden {
+  display: none;
+}
+
+.nowrap{
+  white-space: nowrap;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.float-start{
+  float: left;
+}
+
+.float-end{
+  float: right;
+}
+
+.float-none{
+  float: none;
+}
+
+span[style*="color:#ffffff"] {
+  text-shadow: 2px 2px 3px #333;
+}
+
+.mb:not(:last-child){
+  margin-bottom: 30px;
+}
+
+.button-container{
+  text-align: center;
+}
+/*==========  /ui elements  ==========*/
+
+/*==========  typography  ==========*/
+%h-base{
+  font-weight: bold;
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h1, .h1 {
+  @extend %h-base;
+  font-size: 28px;
+}
+
+h2, .h2 {
+  @extend %h-base;
+  font-size: 26px;
+}
+
+h3, .h3 {
+  @extend %h-base;
+  font-size: 24px;
+}
+
+h4, .h4 {
+  @extend %h-base;
+  font-size: 22px;
+}
+
+h5, .h5 {
+  @extend %h-base;
+  font-size: 18px;
+}
+
+h6, .h6 {
+  @extend %h-base;
+  font-size: 14px;
+}
+
+.sub-title{
+  margin-bottom: 1rem;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-elements{
+  > *:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding: 0;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  ul, ol{
+    margin-top: 0;
+    padding-left: 15px;
+  }
+}
+/*==========  /typography  ==========*/
+
+/*==========  OTHER STYLES  ==========*/
+
+// Костыль, чтоб в netcat 6 в админке не появлялся фон конструктора. Может его исправят в след. версиях
+body { background-color: white !important; }
+
+.section_bg,
+.section_bgc{
+  padding: 15px;
+}
+
+.img-container{
+  &.float-start,
+  &.float-end{
+    margin-bottom: 30px;
+  }
+  &.float-start{
+    margin-right: 30px;
+  }
+  &.float-end{
+    margin-left: 30px;
+  }
+}
+
+// gallery
+.catalog-gallery-wrap{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  .item{
+    border: 1px solid var(--color-admin-line-200);
+    padding: 10px;
+    .img-container{
+      width: 100px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img{
+        max-width: 100px;
+        max-height: 100px;
+      }
+    }
+  }
+}
+
+/* для изменения цены по клику */
+.div_ajax_change{
+  display: inline-block;
+  border-bottom: 1px dashed gray;
+  &.changed{
+    border-color: var(--green);
+    color: var(--green);
+  }
+}
+
+.red-color{
+  color: var(--red-800);
+}
+
+.warning-text {
+  color: var(--red-800);
+  font-size: 18px;
+  line-height: normal;
+}
+
+.warning-text-border{
+  display: inline-block;
+  color: var(--red-800);
+  border: 1px solid var(--red-800);
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.radio__ico,
+.checkbox__ico{
+  display: none;
+}
+/*==========  /OTHER STYLES  ==========*/
+
+/*==========  ВИДЕОГАЛЕРЕЯ И ОТДЕЛЬНЫЙ БЛОК  ==========*/
+iframe, object, embed{
+  border: 0;
+}
+
+// Стили для тега video
+.ckeditor-html5-video:not(.item){
+  max-width: 100%;
+
+  position: relative;
+  background-color: #EEEEEE;
+  border: 3px solid #d7dee3;
+  margin-bottom: 18px;
+  display: inline-block; // для корректного "выравнивание: нет"
+  video.lazy{
+    visibility: hidden;
+  }
+
+  &.float-start{
+    margin-right: 30px;
+    display: block;
+  }
+  &.float-end{
+    margin-left: 30px;
+    display: block;
+  }
+  &.center{
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+  }
+  &.fullwidth{
+    display: block;
+    video{
+      width: 100%;
+    }
+  }
+
+  &:not(.aspect_ratio_original){
+    position: relative;
+    overflow: hidden;
+    //background-color: #000;
+    &:before{
+      content: "";
+      display: block;
+    }
+    video{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100% !important;
+    }
+    &.aspect_ratio_16by9{
+      aspect-ratio: 16/9;
+    }
+    &.aspect_ratio_21by9{
+      aspect-ratio: 21/9;
+    }
+    &.aspect_ratio_4by3{
+      aspect-ratio: 4/3;
+    }
+    &.aspect_ratio_1by1{
+      aspect-ratio: 1/1;
+    }
+  }
+}
+
+.ckeditor-html5-video.item{
+  video{
+    max-width: 320px;
+  }
+}
+.video-container:not(.item) {
+  max-width: 100%;
+
+  position: relative;
+  overflow: hidden;
+  background-color: #EEEEEE;
+  border: 3px solid #d7dee3;
+  margin-bottom: 18px;
+  &:before{
+    content: "";
+    display: block;
+  }
+  iframe{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    &.lazy{
+      display: none;
+    }
+  }
+
+  // Стили соотношения сторон для iframe вставленного с дивом video-container
+  &,
+  &.aspect_ratio_16by9{
+    aspect-ratio: 16/9;
+  }
+  &.aspect_ratio_21by9{
+    aspect-ratio: 21/9;
+  }
+  &.aspect_ratio_4by3{
+    aspect-ratio: 4/3;
+  }
+  &.aspect_ratio_1by1{
+    aspect-ratio: 1/1;
+  }
+
+  // Стили позиционирования для iframe вставленного с дивом video-container
+  &.float-start{
+    margin-right: 30px;
+  }
+  &.float-end{
+    margin-left: 30px;
+  }
+  &.center{
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.video-container.item{
+  iframe{
+    width: auto;
+    height: 150px;
+  }
+}
+
+.video-container-fancybox{
+  // Стили позиционирования для thumbnail
+  max-width: 100%;
+
+  position: relative;
+  overflow: hidden;
+  background-color: #EEEEEE;
+  border: 3px solid #d7dee3;
+  display: inline-block;
+  margin-bottom: 18px;
+  &:before{
+    content: "";
+    display: block;
+    padding-top: 56.25%;
+  }
+  img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%!important;
+    height: 100%!important;
+    &.lazy{
+      display: none;
+    }
+  }
+
+  &.float-start{
+    margin-right: 30px;
+  }
+  &.float-end{
+    margin-left: 30px;
+  }
+  &.center{
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+  }
+  &.fullwidth{
+    display: block;
+  }
+}
+
+.video-container,
+.video-container-fancybox,
+.ckeditor-html5-video{
+
+  &[style*="width: 1280px"]{
+    width: 100% !important;
+  }
+
+  &:not(.item){
+    &:after{
+      content: "▶";
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      font-size: 60px;
+      color: gray;
+    }
+  }
+}
+
+//.video-container,
+//.video-container-fancybox{
+//  &.float-start{
+//    margin-right: 30px;
+//  }
+//  &.float-end{
+//    margin-left: 30px;
+//  }
+//  &.center{
+//    text-align: center;
+//  }
+//  &.fullwidth{
+//    display: block!important;
+//    max-width: 100% !important;
+//    img{
+//      width: 100%;
+//    }
+//  }
+//}
+/*==========  /ВИДЕОГАЛЕРЕЯ И ОТДЕЛЬНЫЙ БЛОК  ==========*/
+
+/*==========  PAGINATION  ==========*/
+.pagination {
+  margin-top: 30px;
+  .pagination-wrapper {
+    display: inline-block;
+  }
+  .pagination-item {
+    float: left;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid var(--color-admin-line-200);
+    text-decoration: none;
+    color: var(--color-admin-text-400);
+    &.selected, &:hover {
+      border: 1px solid var(--color-admin-primary-600);
+    }
+  }
+}
+/*==========  /PAGINATION  ==========*/
+
+/*==========  ADMIN TABLE  ==========*/
+.admin-object-table{
+  width: calc(100% - 20px);
+
+  > table{
+    width: 100%;
+
+    // sticky th
+    border-collapse: separate; /* Don't collapse */
+    border-spacing: 0;
+    > tbody {
+      > tr {
+        > th, > td{
+          border:none;
+          &:first-child{
+            border-left: 1px solid var(--color-admin-line-100);
+          }
+        }
+        > th {
+          position: sticky;
+          top: 0;
+          background-color: #fff;
+          z-index: 1;
+
+          /* Apply both top and bottom borders to the <th> */
+          border-top: 2px solid var(--color-admin-line-600);
+          border-bottom: 2px solid var(--color-admin-line-600);
+          border-right: 1px solid var(--color-admin-line-100);
+        }
+        > td {
+          /* For cells, apply the border to one of each side only (right but not left, bottom but not top) */
+          border-bottom: 1px solid var(--color-admin-line-600);
+          border-right: 1px solid var(--color-admin-line-100);
+        }
+      }
+    }
+    // /sticky th
+
+    > tbody {
+      > tr{
+        &:nth-of-type(even){
+          background-color: var(--color-admin-primary-300);
+          transition: background 0.1s ease-in-out, border 0.1s ease-in-out;
+        }
+        &:hover{
+          > td{
+            transition: background 0.1s ease-in-out, border 0.1s ease-in-out;
+            background-color: var(--color-admin-primary-400);
+          }
+        }
+        &.nc-infoblock-object{
+          position: static;
+        }
+      }
+    }
+
+    table{
+      border-collapse: collapse;
+    }
+  }
+
+  table{
+    td, th{
+      border: 1px solid var(--color-admin-line-200);
+      padding: 10px;
+      //padding: 6px 10px;
+    }
+
+    td{
+      &.td-img{
+        width: 120px;
+        .img-container{
+          text-align: center;
+          img{
+            max-width: 100px;
+            max-height: 100px;
+          }
+        }
+      }
+      &.td-admin-btns{
+        width: 230px;
+      }
+      &.td-price{
+        .price{
+          font-weight: bold;
+          font-size: 16px;
+          white-space: nowrap;
+        }
+        .old-price{
+          text-decoration: line-through;
+          white-space: nowrap;
+        }
+      }
+      &.td-name{
+        min-width: 300px;
+      }
+      &.td-zakaz{
+        padding-left: 0;
+        padding-right: 0;
+        table{
+          text-align: left;
+          border-collapse: collapse;
+          width: 100%;
+          td, th{
+            border:none;
+            border-bottom: 1px solid var(--color-admin-line-200);
+            padding: 6px;
+            height: auto;
+          }
+        }
+        .total{
+          margin-left: 6px;
+          margin-right: 6px;
+          margin-top: 10px;
+          font-weight:bold;
+          .summ{
+            color: var(--red-800);
+          }
+        }
+      }
+      &.td-user{
+        padding-left: 0;
+        padding-right: 0;
+        table{
+          border-collapse: collapse;
+          //width: 100%;
+          th, td{
+            padding: 6px;
+            text-align: left;
+            height: auto;
+            border:none;
+          }
+        }
+      }
+      &.td-date{
+        width: 70px;
+      }
+      &.td-zakaz-table-price{
+        width: 50px;
+      }
+      &.td-zakaz-table-summ{
+        width: 50px;
+      }
+      &.td-form-name{
+        width: 200px;
+      }
+      &.td-form-data{
+        table{
+          text-align: left;
+          border-collapse: collapse;
+          td, th {
+            border:none;
+            border-bottom: 1px solid var(--color-admin-line-200);
+            padding: 6px;
+            height: auto;
+          }
+          tr:last-child {
+            td, th {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+      &.vertical-align-top{
+        vertical-align: top;
+      }
+    }
+  }
+}
+
+.admin-object-table-zakaz-tabs{
+  display: flex;
+  margin-right: 20px;
+  margin-bottom: 15px;
+  background-color: var(--color-admin-primary-200);
+  .admin-object-table-zakaz-tabs-item{
+    text-decoration: none;
+    padding: 10px 0;
+    margin: 0 20px;
+    color: var(--color-admin-text-400);
+    border-bottom: 3px solid transparent;
+    &:hover{
+      color: var(--color-admin-text-600);
+    }
+    &.selected{
+      border-color: var(--color-admin-primary-500);
+      color: var(--color-admin-text-600);
+    }
+  }
+}
+/*==========  /ADMIN TABLE  ==========*/

@@ -1,0 +1,31 @@
+:root {
+  --color-text-200: #595D69; // gray text
+  --color-text-400: #32A5FF;
+  --color-text-600: #0B488C; // title
+  --color-text-800: #000; // default text
+
+  --color-primary-600: #1F74CA; // основной акцентный цвет
+  --color-primary-800: #0B437B;
+
+  --color-secondary-100: #F2F6FA; // цвет светло серых фонов
+  --color-secondary-200: #E1E8EF; // цвет светло серых фонов, но чуть темнее
+  --color-secondary-400: #31A5FF;
+  --color-secondary-800: #CA0D10; // дополнительный акцентный цвет
+
+  --shadow: 0px 10px 30px 0px rgba(0, 65, 130, 0.25);
+  --shadow-hover: 0px 5px 10px 0px rgba(0, 65, 130, 0.25);
+  --shadow-button: 0px 10px 25px 0px rgba(1, 88, 200, 0.30);
+  --shadow-button-hover: 0px 5px 10px 0px rgba(1, 88, 200, 0.30);
+  --gradient-bg: linear-gradient(270deg, #F2F6FA 0%, var(--color-secondary-200) 100%);
+  --gradient-button: linear-gradient(90deg, #3064BE 0%, #3EAFFF 100%);
+
+  --color-line: #CDD2D9; // цвет границ
+  --focus: #869791;
+
+  --orange: #f4a70b;
+  --red-600: #ff5400;
+  --red-800: #d9534f;
+  --white: #fff;
+
+  //--system-font: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+}

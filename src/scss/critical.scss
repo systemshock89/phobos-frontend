@@ -1,0 +1,20 @@
+@use 'sass:math';
+
+// Переменные, миксины, функции
+@import "_base/1_variables";
+@import "_helpers/mixins";
+@import "_helpers/functions";
+
+@import 'node_modules/modern-normalize/modern-normalize'; // normalize
+
+// base
+@import "_base/3_base";
+@import "_base/4_typography";
+@import "_base/5_ui-elements";
+@import "_base/6_grid";
+
+// video
+@import "../components/video/video-elements";
+@import "../components/video/video-gallery";
+@import "../components/video/video-gallery-fb";
+@import "../components/video/video-html5";

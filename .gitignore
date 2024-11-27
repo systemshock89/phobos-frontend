@@ -1,0 +1,87 @@
+# FRONTEND
+/dist/
+/css/
+/fonts/
+/img/
+/js/
+/favicon.ico
+/manifest.webmanifest
+/gulp-tasks/_settings.js
+
+node_modules/
+.vscode/
+.idea/
+/**/Thumbs.db
+/**/*.DS_Store
+# /FRONTEND
+
+# NETCAT FILES
+/classes/smarty/
+/form_fmc/templates_c/
+/form_fmc/filedata/
+
+/netcat/
+
+# file: netcat/modules/default/function.inc.php
+!/netcat/
+/netcat/*
+!/netcat/modules/
+/netcat/modules/*
+!/netcat/modules/default/
+/netcat/modules/default/*
+!/netcat/modules/default/function.inc.php
+
+# folder: netcat/editors/ckeditor4/plugins/youtube, html5video
+!/netcat/editors/
+/netcat/editors/*
+!/netcat/editors/ckeditor4/
+/netcat/editors/ckeditor4/*
+!/netcat/editors/ckeditor4/plugins/
+/netcat/editors/ckeditor4/plugins/*
+!/netcat/editors/ckeditor4/plugins/youtube/
+!/netcat/editors/ckeditor4/plugins/html5video/
+!/netcat/editors/ckeditor4/config.js
+
+/netcat_cache/
+/netcat_dump/
+/netcat_files/
+#/netcat_files/generated/
+
+/netcat_template/
+
+# folder: netcat_template/template/
+!/netcat_template/
+/netcat_template/*
+!/netcat_template/template/
+/netcat_template/template/**/Header.html
+/netcat_template/template/**/Footer.html
+
+# critical css
+/netcat_template/template/main/partials/critical.html
+
+# components css
+/netcat_template/template/main/partials/components.html
+
+# folder: netcat_template/class
+/netcat_template/class/netcat_*/
+/netcat_template/class/table/
+!/netcat_template/class/
+/netcat_template/class/**/FormPrefix.html
+/netcat_template/class/**/RecordTemplate.html
+/netcat_template/class/**/FormSuffix.html
+
+/netcat_trash/
+/templates_c/
+
+/.htaccess
+/.htpasswd
+/global.php
+/index.php
+/test.php
+/vars.inc.php
+/yandex_*.html
+/google*.html
+/*.gz
+/*.sql
+/*.zip
+# /NETCAT FILES

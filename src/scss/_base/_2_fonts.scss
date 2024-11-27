@@ -1,0 +1,119 @@
+// подключение шрифтов только woff2
+@mixin font($fname, $fweight, $fstyle, $furl) {
+  @font-face {
+    font-family: $fname;
+    font-display: swap;
+    font-style: $fstyle;
+    font-weight: $fweight;
+    src: url($furl) format('woff2');
+  }
+}
+
+@include font('roboto-my', 400, normal, '../fonts/Roboto-Regular.woff2');
+@include font('roboto-my', 700, normal, '../fonts/Roboto-Bold.woff2');
+@include font('roboto-my', 800, normal, '../fonts/Roboto-Black.woff2');
+
+@include font('montserrat-my', 400, normal, '../fonts/Montserrat-Regular.woff2');
+@include font('montserrat-my', 700, normal, '../fonts/Montserrat-Bold.woff2');
+@include font('montserrat-my', 900, normal, '../fonts/Montserrat-Black.woff2');
+
+// Font fallbacks
+// npx fontpie ./src/fonts/Roboto-Regular.woff2 -n roboto-my
+// npx fontpie ./src/fonts/Roboto-Bold.woff2 -w 700 -n roboto-my
+// npx fontpie ./src/fonts/Roboto-Italic.woff2 -s italic -n roboto-my
+// https://github.com/pixel-point/fontpie
+
+@font-face {
+  font-family: 'roboto-my Fallback';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Arial');
+  ascent-override: 92.49%;
+  descent-override: 24.34%;
+  line-gap-override: 0.00%;
+  size-adjust: 100.30%;
+}
+
+@font-face {
+  font-family: 'roboto-my Fallback';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Arial Bold');
+  ascent-override: 98.53%;
+  descent-override: 25.93%;
+  line-gap-override: 0.00%;
+  size-adjust: 94.16%;
+}
+
+@font-face {
+  font-family: 'roboto-my Fallback';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Arial Bold');
+  ascent-override: 97.92%;
+  descent-override: 25.77%;
+  line-gap-override: 0.00%;
+  size-adjust: 94.75%;
+}
+
+@font-face {
+  font-family: 'montserrat-my Fallback';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Arial');
+  ascent-override: 84.95%;
+  descent-override: 22.03%;
+  line-gap-override: 0.00%;
+  size-adjust: 113.95%;
+}
+
+@font-face {
+  font-family: 'montserrat-my Fallback';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Arial Bold');
+  ascent-override: 88.84%;
+  descent-override: 23.04%;
+  line-gap-override: 0.00%;
+  size-adjust: 108.96%;
+}
+
+@font-face {
+  font-family: 'montserrat-my Fallback';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Arial Bold');
+  ascent-override: 87.19%;
+  descent-override: 22.61%;
+  line-gap-override: 0.00%;
+  size-adjust: 111.02%;
+}
+
+@font-face {
+  font-family: 'montserrat-my Fallback';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Arial Bold');
+  ascent-override: 83.69%;
+  descent-override: 21.70%;
+  line-gap-override: 0.00%;
+  size-adjust: 115.66%;
+}
+
+// font-weight helper:
+
+// 100 Extra Light or Ultra Light;
+// 200 Light or Thin; 300 Book or Demi;
+// 400 Regular or Normal;
+// 500 Medium;
+// 600 Semibold or Demibold;
+// 700 Bold;
+// 800 Black or Extra Bold or Heavy;
+// 900 Extra Black or Fat or Ultra Black
+
+// подключение шрифтов разных форматов
+//@import '../_helpers/font-face';
+//@include font-face("Roboto-mw", 400, normal, "../fonts/RobotoRegular/RobotoRegular", woff2 woff);
+//@include font-face("Roboto-mw", 700, normal, "../fonts/RobotoBold/RobotoBold", woff2 woff);
+//@include font-face("Roboto-mw", 400, italic, "../fonts/RobotoItalic/RobotoItalic", woff woff2 ttf); // italic
+//@include font-face("Roboto-mw", 400, normal, "../fonts/RobotoRegular/RobotoRegular", eot woff2 woff ttf svg); // eot woff2 woff ttf svg

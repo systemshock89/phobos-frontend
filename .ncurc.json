@@ -1,0 +1,4 @@
+{
+  "upgrade": false,
+  "reject": ["@webcreate/infinite-ajax-scroll", "gulp"]
+}

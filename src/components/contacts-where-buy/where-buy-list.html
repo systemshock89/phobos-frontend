@@ -1,0 +1,135 @@
+<div class="contacts-block-list section section_mb">
+    <div class="container">
+
+        <div class="title-wrapper">
+            <div class="h1">Где купить - список</div>
+        </div>
+
+        <form class="contacts-block-list__form-city mb">
+            <select class="form-control form-control_select form-control_select-city">
+                <option>Выберите город</option>
+                <option>Москва</option>
+                <option>Тверь</option>
+            </select>
+        </form>
+
+        <div class="contacts-block-list__map-container mb">
+            <button class="button contacts-block-list__button">Развернуть карту</button>
+
+            <div class="contacts-block-list__map">
+                <div class="contacts-block-list__map-wrap" id="contacts-block-list__map">
+                    <script>
+                        const itemsArr = [
+                            {
+                                "adress": "Советская улица, 23",
+                                "coord1": "56.8595",
+                                "coord2": "35.9186",
+                                "img": "",
+                                "title_h1": "Филиал-Тверь",
+                                "phone1": "",
+                                "phone2": "",
+                                "phone3": "",
+                                "adress_text": "",
+                                "email": "",
+                                "email2": "",
+                                "is_img_preview": false,
+                                "img_preview": "",
+                                "link": "/info/wherebuy/filial-tver.html",
+                                "phone1_normal": null,
+                                "phone2_normal": null,
+                                "phone3_normal": null
+                            },
+                            {
+                                "adress": "бежецк чехова 1",
+                                "email": "info@cms-nc.ru",
+                                "coord1": "57.7918",
+                                "coord2": "36.7071",
+                                "title_h1": "Тестовый филиал",
+                                "phone1": "8(920) 123-45-67",
+                                "phone2": "+7 (903) 695-55-04",
+                                "phone3": "",
+                                "adress_text": "г.Бежецк, ул.Чехова, д.1",
+                                "is_img_preview": true,
+                                "img_preview": "img/temp/gallery_preview.webp",
+                                "link": "/info/wherebuy/testovyy-filial.html",
+                                "phone1_normal": "+79201234567",
+                                "phone2_normal": "+79036955504",
+                                "phone3_normal": null
+                            }
+                        ]
+
+                        document.addEventListener("DOMContentLoaded", function() {
+                            contactsListMap(itemsArr, 'd05b0660-3251-4a51-ba3c-2c03a012329d');
+                        });
+                    </script>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="contacts-block-list__links mb">
+            <a class="contacts-block-list__link link" href="#wherebuy_1">Брянская область</a>
+            <a class="contacts-block-list__link link" href="#wherebuy_2">Владимирская область</a>
+            <a class="contacts-block-list__link link" href="#wherebuy_3">Вологодская область</a>
+        </div>
+
+        <div class="contacts-block-list__items mb">
+
+            <div class="contacts-block-list__item" id="wherebuy_1">
+                <div class="contacts-block-list__name">Брянская область</div>
+
+                <div class="contacts-block-list__text">
+                    <div><a href="#" class="link">ТК СтройлоН</a></div>
+                    <div>Брянск, улица Бурова, 14</div>
+                    <div>
+                        Тел.: <a href="tel:+74951234567" class="link nowrap" title="Позвонить">+7 (495) 123-45-67</a>
+                    </div>
+                    <div>
+                        E-mail: <a href="mailto:info@site.ru" class="link" title="Написать письмо">info@site.ru</a>
+                    </div>
+                </div>
+
+                <div class="contacts-block-list__text">
+                    <div><a href="#" class="link">ТК СтройлоН</a></div>
+                    <div>Брянск, улица Бурова, 14</div>
+                    <div>
+                        Тел.: <a href="tel:+74951234567" class="link nowrap" title="Позвонить">+7 (495) 123-45-67</a>
+                    </div>
+                    <div>
+                        E-mail: <a href="mailto:info@site.ru" class="link" title="Написать письмо">info@site.ru</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contacts-block-list__item" id="wherebuy_2">
+                <div class="contacts-block-list__name">Владимирская область</div>
+                <div class="contacts-block-list__text">
+                    <div><a href="#" class="link">ТК СтройлоН</a></div>
+                    <div>Брянск, улица Бурова, 14</div>
+                    <div>
+                        Тел.: <a href="tel:+74951234567" class="link nowrap" title="Позвонить">+7 (495) 123-45-67</a>
+                    </div>
+                    <div>
+                        E-mail: <a href="mailto:info@site.ru" class="link" title="Написать письмо">info@site.ru</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contacts-block-list__item" id="wherebuy_3">
+                <div class="contacts-block-list__name">Вологодская область</div>
+                <div class="contacts-block-list__text">
+                    <div><a href="#" class="link">ТК СтройлоН</a></div>
+                    <div>Брянск, улица Бурова, 14</div>
+                    <div>
+                        Тел.: <a href="tel:+74951234567" class="link nowrap" title="Позвонить">+7 (495) 123-45-67</a>
+                    </div>
+                    <div>
+                        E-mail: <a href="mailto:info@site.ru" class="link" title="Написать письмо">info@site.ru</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

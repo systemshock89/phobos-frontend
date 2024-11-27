@@ -1,0 +1,327 @@
+::placeholder {
+  color: var(--color-text-200);
+}
+
+// form-controls
+// inputs, textarea
+.form-control{
+  padding: 6px 12px;
+  border: 1px solid var(--color-line);
+  transition: border ease-in-out 0.2s, box-shadow ease-in-out 0.2s;
+  height: 50px;
+  @media only screen and (max-width: 767px) {
+    height: 40px;
+  }
+  border-radius: 5px; // for iOS
+
+  overflow-x: clip;
+  text-overflow: ellipsis;
+  &:focus-visible {
+    outline: none;
+    border-color: var(--color-primary-600);
+    //box-shadow: 0 0 0 1pt var(--focus);
+  }
+}
+
+// select
+.form-control_select{
+  background-color: var(--white);
+  text-overflow: ellipsis;
+  overflow-x: clip;
+
+  padding: 6px 25px 6px 14px;
+  appearance: none;
+  background-image: url('../img/sprite.svg#arrow-select');
+  background-repeat: no-repeat;
+  background-position: right 9px center;
+  background-size: 11px auto;
+
+  color: var(--color-text-800); // for iOS
+}
+
+option{
+  font-size: 14px;
+}
+
+.form-control_textarea{
+  height: 4.5rem;
+  min-height: 40px;
+  resize: vertical;
+}
+
+// input file
+.form-control_file{
+  font-size: 14px;
+  padding: 0;
+  border: none;
+}
+
+//input, textarea{
+//  outline: none;
+//  &:focus-visible:required:invalid{
+//    border-color: var(--red);
+//  }
+//  &:required:valid{
+//    border-color: green;
+//  }
+//}
+
+label,
+input[type='radio'],
+input[type='checkbox'] {
+  cursor: pointer;
+}
+
+// checkbox
+$checkbox-color: var(--color-line); // for custom
+$checkbox-color-checked: var(--color-primary-600);
+
+.checkbox{
+  --checkbox-width: 16px;
+  --checkbox-height: 16px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.1;
+  &:not(:last-child){
+    margin-bottom: 10px;
+  }
+}
+
+.checkbox__input{
+  width: var(--checkbox-width);
+  height: var(--checkbox-height);
+  accent-color: $checkbox-color-checked;
+  flex-shrink: 0;
+}
+
+.checkbox_custom{
+  &:hover .checkbox__ico{
+    opacity: .6;
+  }
+  .checkbox__ico{
+    width: var(--checkbox-width);
+    height: var(--checkbox-height);
+    border: 1px solid $checkbox-color;
+    background-color: #fff;
+    svg{
+      opacity: 0;
+      width: 12px;
+      height: 12px;
+      use{
+        fill: #fff;
+        transition: fill 0.1s ease-in-out;
+      }
+    }
+    //&:before{
+    //  background-color: $checkbox-color;
+    //  width: 10px;
+    //  height: 10px;
+    //
+    //  content: '';
+    //  opacity: 0;
+    //  transition: opacity 0.1s ease-in-out;
+    //}
+    transition: opacity 0.1s ease-in-out, border 0.1s ease-in-out;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .checkbox__input{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    &:focus-visible + .checkbox__ico{
+      outline: 2px solid var(--orange);
+    }
+    &:checked + .checkbox__ico{
+      border: 1px solid $checkbox-color-checked;
+      background-color: $checkbox-color-checked;
+      svg{
+        opacity: 1;
+      }
+      //&:before{
+      //  opacity: 1;
+      //}
+    }
+    &:checked:not(:disabled) + .checkbox__ico{
+     
+    }
+    &:disabled + .checkbox__ico{
+      opacity: 0.4;
+    }
+  }
+}
+.checkbox_disabled{
+  cursor: not-allowed;
+}
+
+// radio
+$radio-color: #6e6e6e; // for custom
+$radio-color-checked: var(--color-primary-600);
+
+.radio{
+  --radio-width: 18px;
+  --radio-height: 18px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.1;
+  &:not(:last-child){
+    margin-bottom: 15px;
+  }
+}
+.radio__input{
+  width: var(--radio-width);
+  height: var(--radio-height);
+  accent-color: $radio-color-checked;
+  flex-shrink: 0;
+}
+.radio_custom{
+  &:hover .radio__ico{
+    opacity: .6;
+  }
+  .radio__ico{
+    width: var(--radio-width);
+    height: var(--radio-height);
+    border: 2px solid $radio-color;
+    &:before{
+      background-color: $radio-color;
+      width: 10px;
+      height: 10px;
+
+      border-radius: 50%;
+      content: '';
+      opacity: 0;
+      transition: opacity 0.1s ease-in-out;
+    }
+    transition: opacity 0.1s ease-in-out, border 0.1s ease-in-out;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .radio__input{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    &:focus-visible + .radio__ico{
+      outline: 2px solid var(--orange);
+    }
+    &:checked + .radio__ico{
+      &:before{
+        opacity: 1;
+      }
+    }
+    &:checked:not(:disabled) + .radio__ico{
+      border: 2px solid $radio-color-checked;
+      &:before{
+        background-color: $radio-color-checked;
+      }
+    }
+    &:disabled + .radio__ico{
+      opacity: 0.4;
+    }
+  }
+}
+.radio_disabled{
+  cursor: not-allowed;
+}
+
+// form base
+.form{
+
+}
+
+.form__title{
+  font-size: betterClamp(18, 24);
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.form__field{
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 5px 10px;
+  align-items: center;
+}
+
+.form__field_named{
+  grid-template-columns: 25% minmax(0, 1fr);
+  .form__feedback{
+    grid-column: 2 / -1;
+  }
+}
+
+.form__field_named-top{
+  align-items: flex-start;
+  .form__label-name{
+    margin-top: .5em;
+  }
+}
+
+.form__field_error{
+  color: var(--red-800);
+  .form-control{
+    border-color: var(--red-800);
+  }
+  .form__feedback{
+    display: block;
+  }
+}
+
+.form__field_personal{
+  font-size: 13px;
+  .checkbox{
+    margin-bottom: 0;
+    color: var(--color-text-800);
+  }
+  .form__feedback{
+    font-size: 13px;
+  }
+}
+
+.form__label-name{
+  line-height: 1.1;
+  text-overflow: ellipsis;
+  overflow: clip;
+  span{
+    color: var(--orange);
+    white-space: pre;
+  }
+}
+
+.form__feedback{
+  line-height: 1.1;
+  font-size: 14px;
+  display: none;
+}
+
+.form__button{
+
+}
+
+@media only screen and (max-width: 575px) {
+  .form__field_named{
+    grid-template-columns: minmax(0, 1fr);
+    .form__feedback{
+      grid-column: auto;
+    }
+  }
+  .form__label-name{
+    display: none;
+  }
+  .form__feedback{
+    font-size: 12px;
+  }
+}
+

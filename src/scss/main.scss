@@ -1,0 +1,11 @@
+@use 'sass:math';
+
+// Основное
+@import "_helpers/mixins";
+@import "_helpers/functions";
+@import "_base/2_fonts"; // шрифты
+
+// forms
+@import "../components/forms/form-base";
+@import "../components/forms/form-modals";
+

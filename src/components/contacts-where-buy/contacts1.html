@@ -1,0 +1,188 @@
+<div class="title-wrapper">
+    <div class="container">
+        <h1>Контакты - в 2 колонки</h1>
+    </div>
+</div>
+
+<div class="contacts-block section section_mb">
+    <div class="container">
+
+        <div class="contacts-block__item">
+            <div class="title-wrapper">
+                <div class="h3">Фирма 1</div>
+                <div class="sub-title">Подзаголовок</div>
+            </div>
+
+            <div class="text-top text-elements mb">
+                <p>Текст сверху</p>
+            </div>
+
+            <div class="contacts-block__grid mb">
+
+                <div class="contacts-block__fields">
+
+                    <div class="contacts-block__field">
+                        <div class="contacts-block__field-flex">
+                            <svg class="contacts-block__field-svg"><use xlink:href="img/sprite.svg#phone"></use></svg>
+                            <div class="contacts-block__field-wrap">
+                                <div class="contacts-block__field-title">Телефон:</div>
+                                <div class="contacts-block__field-text">
+                                    <div class="phone-wrap">
+                                        <a href="tel:+79157324044" class="phone nowrap link" title="Позвонить">+7 (999) 999-99-99</a>
+                                        <a href="https://wa.me/79001112233" class="phone-wrap__ico" target="_blank" title="WhatsApp" style="--logo-color: #25D366" onclick="ym(yaC, 'reachGoal', 'WHATSAPP'); return true;">
+                                            <svg><use xlink:href="img/sprite.svg#s-whatsapp"></use></svg>
+                                        </a>
+                                    </div>
+                                    <div class="phone-wrap">
+                                        <a href="tel:+79157324044" class="phone nowrap link" title="Позвонить">+7 (999) 999-99-99</a>
+                                        <a href="https://wa.me/79001112233" class="phone-wrap__ico" target="_blank" title="WhatsApp" style="--logo-color: #25D366" onclick="ym(yaC, 'reachGoal', 'WHATSAPP'); return true;">
+                                            <svg><use xlink:href="img/sprite.svg#s-whatsapp"></use></svg>
+                                        </a>
+                                    </div>
+                                    <div class="phone-wrap">
+                                        <a href="tel:+79157324044" class="phone nowrap link" title="Позвонить">+7 (999) 999-99-99</a>
+                                        <a href="https://wa.me/79001112233" class="phone-wrap__ico" target="_blank" title="WhatsApp" style="--logo-color: #25D366" onclick="ym(yaC, 'reachGoal', 'WHATSAPP'); return true;">
+                                            <svg><use xlink:href="img/sprite.svg#s-whatsapp"></use></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="contacts-block__field-text">Это дополнительный текст</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contacts-block__field">
+                        <div class="contacts-block__field-flex">
+                            <svg class="contacts-block__field-svg"><use xlink:href="img/sprite.svg#email"></use></svg>
+                            <div class="contacts-block__field-wrap">
+                                <div class="contacts-block__field-title">E-mail:</div>
+                                <div class="contacts-block__field-text">
+                                    <div><a href="mailto:info@cms-nc.ru">info@cms-nc.ru</a></div>
+                                    <div><a href="mailto:info@cms-nc.ru">info@cms-nc.ru</a></div>
+                                </div>
+                                <div class="contacts-block__field-text">Это дополнительный текст</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contacts-block__field">
+                        <div class="contacts-block__field-flex">
+                            <svg class="contacts-block__field-svg"><use xlink:href="img/sprite.svg#globe"></use></svg>
+                            <div class="contacts-block__field-wrap">
+                                <div class="contacts-block__field-title">Сайт: (для "Где купить")</div>
+                                <div class="contacts-block__field-text">
+                                    <div>
+                                        <!--noindex-->
+                                        <a href="https://ya.ru/" target="_blank" rel="nofollow">ya.ru</a>
+                                        <!--/noindex-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contacts-block__field">
+                        <div class="contacts-block__field-flex">
+                            <svg class="contacts-block__field-svg"><use xlink:href="img/sprite.svg#location"></use></svg>
+                            <div class="contacts-block__field-wrap">
+                                <div class="contacts-block__field-title">Адрес:</div>
+                                <div class="contacts-block__field-text">170000, Москва, Кремль, 12</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contacts-block__field">
+                        <div class="contacts-block__field-flex">
+                            <svg class="contacts-block__field-svg"><use xlink:href="img/sprite.svg#clock"></use></svg>
+                            <div class="contacts-block__field-wrap">
+                                <div class="contacts-block__field-title">Время работы:</div>
+                                <div class="contacts-block__field-text">
+                                    Пн.– Пт. с 9 до 18 <br>
+                                    Сб.– Вск. выходной
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contacts-block__field">
+                        <div class="contacts-block__field-flex">
+                            <div class="contacts-block__field-wrap">
+                                <div class="contacts-block__field-title">Мы в соцсетях:</div>
+                                <div class="contacts-block__field-text">
+                                    @@include('socials/socials.html', { "class": "socials_desktop" })
+
+                                    @@include('socials/socials-messengers.html', { "class": "socials_desktop" })
+                                </div>
+                                <div class="contacts-block__field-text">Это дополнительный текст</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Картинка у блока "Где купить" на внутренней -->
+                    <!--                            <div class="contacts-block__field">-->
+                    <!--                                <a  href="img/temp/gallery_preview.webp" class="contacts-block__img-container img-container" data-fancybox >-->
+                    <!--                                    <img src="img/temp/gallery_preview.webp" width="410" height="274" class="img-fluid" alt="">-->
+                    <!--                                </a>-->
+                    <!--                            </div>-->
+
+                </div>
+
+                <div class="contacts-block__fields">
+                    <div class="contacts-block__field">
+
+                        <div class="contacts-block__field-flex">
+                            <svg class="contacts-block__field-svg"><use xlink:href="img/sprite.svg#map"></use></svg>
+                            <div class="contacts-block__field-wrap">
+                                <div class="contacts-block__field-title">Карта:</div>
+                                <div class="contacts-block__field-text">Это сгенерированная карта</div>
+                            </div>
+                        </div>
+
+                        <div class="contacts__map" id="contacts__map4">
+                            <div class="contacts__map-wrap">
+                                <script>
+                                    document.addEventListener("DOMContentLoaded", function() {
+                                        contactsMap('contacts__map4', 55.7521, 37.6169, 'Название фирмы', 'адрес фирмы>', 15, 'd05b0660-3251-4a51-ba3c-2c03a012329d');
+                                    });
+                                </script>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="contacts-block__field">
+
+                        <div class="contacts-block__field-flex">
+                            <svg class="contacts-block__field-svg"><use xlink:href="img/sprite.svg#map"></use></svg>
+                            <div class="contacts-block__field-wrap">
+                                <div class="contacts-block__field-title">Карта:</div>
+                                <div class="contacts-block__field-text">Это карта из конструктора карт</div>
+                            </div>
+                        </div>
+
+
+                        <div class="contacts__map">
+                            <div class="contacts__map-wrap" id="contacts__map-constructor3">
+                                <!--                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0e0a55c3aae578bc8e14e7953c4caf9af4af4bdc91476e47fff0914261db05f0&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>-->
+
+                                <script>
+                                    document.addEventListener("DOMContentLoaded", function() {
+                                        observerMap('contacts__map-constructor3', 'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0e0a55c3aae578bc8e14e7953c4caf9af4af4bdc91476e47fff0914261db05f0&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true');
+                                    });
+                                </script>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-bottom text-elements mb">
+                <p>А это текст снизу</p>
+            </div>
+
+        </div>
+
+    </div>
+</div>
