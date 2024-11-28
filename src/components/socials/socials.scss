@@ -36,7 +36,14 @@
 
 // socials_footer
 .socials_footer {
-
+  margin-top: 10px;
+  gap:30px;
+  .socials__item{
+    svg{
+      max-width: 40px;
+      max-height: 30px;
+    }
+  }
 }
 
 // socials_mobile
