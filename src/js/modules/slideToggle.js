@@ -1,9 +1,9 @@
 /* plain JS slideToggle https://github.com/ericbutler555/plain-js-slidetoggle */
 
-function slideToggle(duration = 400, callback) {
+function slideToggle(duration = 400, callback, displayStyle = 'block') {
   const isDown = this.clientHeight === 0;
   this.style.overflow = "hidden";
-  if (isDown) this.style.display = "block";
+  if (isDown) this.style.display = displayStyle;
 
   const elStyles = window.getComputedStyle(this);
   const elHeight = parseFloat(elStyles.getPropertyValue('height'));

@@ -1,0 +1,128 @@
+.header{
+  flex: none;
+}
+
+.header__desktop {
+  margin-top: calc(-1 * var(--header__desktop-top-height));
+  margin-bottom: calc(-1 * var(--menu-top__link-height));
+
+  @media only screen and (max-width: 991px) {
+    display: none;
+  }
+  background-color: var(--color-primary-800);
+}
+
+.header__grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, auto));
+  gap: 15px;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: calc(15px + var(--header__desktop-top-height));
+  padding-bottom: calc(15px + var(--menu-top__link-height));
+
+  position: relative;
+  &:before{
+    position: absolute;
+    top: 0;
+    left: -135px;
+    content: '';
+    background: url('../img/header-map.webp');
+    background-size: cover;
+    display: block;
+    aspect-ratio: 622 / 190;
+    height: 100%;
+  }
+}
+
+.header__wrapper{
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  @media only screen and (max-width: 1359px) {
+  	flex-direction: column;
+  }
+}
+
+.header__logo {
+  min-width: 100px;
+  &[href]:hover{
+    opacity: .8;
+  }
+  img{
+    display: block;
+  }
+}
+
+.header__descr{
+  background-color: rgba(#002B56, .4);
+  padding: 5px 10px;
+  border-radius: 3px;
+  min-width: 300px;
+
+  font-weight: 800;
+  color: var(--color-text-400);
+  line-height: 145%;
+  text-transform: uppercase;
+  text-align: center;
+
+  svg {
+    position: relative;
+    top: 5px;
+    margin-right: 2px;
+    use {
+      fill: #fff
+    }
+  }
+}
+
+.header__contacts {
+  display: flex;
+  gap: 15px 35px;
+  position: relative;
+}
+
+.header__contacts-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header__contacts-el1{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--color-text-400);
+  font-size: betterClamp(14, 18);
+  font-weight: 800;
+  line-height: 120%;
+  svg use{
+    fill: #fff;
+  }
+
+  &:hover{
+    color: #fff;
+  }
+}
+
+.header__phone{
+  font-size: betterClamp(14, 21);
+  line-height: 135%;
+}
+
+.header__contacts-el2{
+  font-size: 13px;
+  line-height: 140%;
+  text-align: right;
+  color: #fff;
+}
+
+.header__contacts-form{
+  margin-left: auto;
+  display: flex;
+  &:hover{
+    color: var(--color-text-400);
+  }
+}

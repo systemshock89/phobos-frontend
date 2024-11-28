@@ -1,0 +1,111 @@
+:root {
+  // for anchor offset, menu-top offset
+  --header__desktop-top-height: 40px;
+  //@media only screen and (max-width: 991px) {
+  //  --header__desktop-top-height: 63px;
+  //}
+}
+
+.header-top{
+  min-height: var(--header__desktop-top-height);
+
+  flex: none;
+  position: sticky;
+  top: var(--nc-navbar-height, 0px);
+  z-index: 4;
+
+  color: rgba(#fff, .7);
+  background-color: var(--color-primary-800);
+  transition: background 0.1s ease-in-out;
+  @media only screen and (max-width: 991px) {
+    display: none;
+  }
+}
+
+.header-top_bg-transparent{
+  background-color: transparent;
+}
+
+.header-top__grid{
+  min-height: inherit;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, auto));
+  @media only screen and (max-width: 991px) {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+  gap: 5px 15px;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    left: 15px;
+    bottom: 0;
+    width: calc(100% - 30px);
+    height: 1px;
+    background-color: rgba(#fff,.2);
+  }
+}
+
+.header-top__text{
+  margin-left: 12px;
+}
+
+.header-top__contacts{
+  position: relative;
+}
+
+.header-top__contacts-btn{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  svg use{
+    fill: rgba(#fff,.7);
+    transition: fill 0.1s ease-in-out;
+  }
+}
+
+.header-top__contacts-btn:hover,
+.header-top__contacts-btn_active{
+  color: var(--color-text-400);
+  svg use{
+    fill: #fff;
+  }
+}
+
+.header-top__contacts-list{
+  display: none;
+
+  flex-direction: column;
+
+  position: absolute;
+  left: -10px;
+  top: calc(100% + 7px);
+  background-color: var(--color-secondary-100);
+  box-shadow: var(--shadow);
+  border-radius: 5px;
+
+  max-width: 372px;
+  width: max-content;
+}
+
+.header-top__contacts-item{
+  min-height: 30px;
+  padding: 6px 15px;
+  line-height: 1.2;
+  font-size: 13px;
+  color: var(--color-text-600);
+  text-decoration: none;
+
+  &:not(:last-child){
+    border-bottom: 1px solid #fff;
+  }
+
+  &:hover{
+    color: var(--color-text-400);
+  }
+}

@@ -1,0 +1,120 @@
+// socials
+.socials{
+  display: flex;
+
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+// socials__desktop
+.socials_desktop{
+  .socials__item{
+    display: flex;
+    svg{
+      width: auto;
+      max-width: 25px;
+      max-height: 20px;
+      use{
+        fill: #fff;
+        transition: fill 0.1s ease-in-out;
+      }
+    }
+    &:hover{
+      svg use{
+        fill: var(--color-secondary-400);
+      }
+    }
+  }
+}
+
+// socials_header
+.socials_header{
+  .socials__item{
+    opacity: .7;
+  }
+}
+
+// socials_footer
+.socials_footer {
+
+}
+
+// socials_mobile
+.mm-navbar{
+  justify-content: center;
+  .socials__item{
+    margin: 4px 2px;
+    max-width: 44px;
+    height: 44px;
+    border-radius: 4px;
+    background: var(--logo-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg{
+      width: 65%;
+      max-height: 65%;
+      use{
+        fill: #fff;
+      }
+    }
+  }
+}
+
+// socials_messengers-mobile
+.socials_messengers-mobile{
+  margin-left: 5px;
+  margin-right: 5px;
+  flex-wrap: nowrap;
+  .socials__item{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: var(--logo-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg{
+      width: 65%;
+      max-height: 65%;
+      use{
+        fill: #fff;
+      }
+    }
+  }
+}
+
+// phone-wrap (header, footer, map, contacts)
+.phone-wrap{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.phone-wrap__ico{
+  width: 20px;
+  height: 20px;
+  //border-radius: 50%;
+  //background-color: var(--logo-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  svg{
+    width: 100%;
+    max-height: 100%;
+    //width: 65%;
+    //max-height: 65%;
+    use{
+      fill: var(--logo-color);
+      //fill: #fff;
+    }
+  }
+  &:hover{
+    opacity: .8;
+  }
+}
+// //phone-wrap

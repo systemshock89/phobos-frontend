@@ -13,6 +13,13 @@
 @import "_base/5_ui-elements";
 @import "_base/6_grid";
 
+// Основные блоки: header, menu, sidebar, footer
+@import "../components/_base/header/header-desktop";
+@import "../components/_base/header/header-top";
+@import "../components/_base/header/header-mobile";
+@import "../components/_base/menu-top/menu-top";
+@import "../components/socials/socials"; // socials, phone-wrap
+
 // video
 @import "../components/video/video-elements";
 @import "../components/video/video-gallery";

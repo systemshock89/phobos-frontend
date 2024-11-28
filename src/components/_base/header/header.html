@@ -1,0 +1,100 @@
+<div class="header-top">
+    <div class="header-top__grid container">
+        <div class="header-top__text">Надежный спутник на рынке труда</div>
+
+        <div class="header-top__contacts">
+            <button class="header-top__contacts-btn"><svg width="24" height="24"><use xlink:href="img/sprite.svg#location"></use></svg> Работаем по всей России</button>
+            <div class="header-top__contacts-list">
+                <a href="#" class="header-top__contacts-item">г. Тверь, наб. Афанасия Никитина, д.144, 2 эт.</a>
+                <a href="#" class="header-top__contacts-item">г. Торжок, ул. Красный городок, д.1</a>
+                <a href="#" class="header-top__contacts-item">г. Санкт-Петербург, Ленинский пр-кт, д.168, оф.504, 5 эт.</a>
+                <a href="#" class="header-top__contacts-item">г. Брянск, ул. Ульянова, д.16, оф.9, 2 эт.</a>
+                <a href="#" class="header-top__contacts-item">г. Ростов-на-Дону, ул. Береговая, д.10, 4 эт.</a>
+                <a href="#" class="header-top__contacts-item">г. Новочеркасск, ул. Московская, д.6, оф.2, 2 эт.</a>
+                <a href="#" class="header-top__contacts-item">г. Киров, ул. Горьково, д.5, оф.702, 7 эт.</a>
+            </div>
+        </div>
+
+        @@include('socials/socials-messengers.html', { "class": "socials_desktop socials_header" })
+    </div>
+</div>
+
+<header class="header">
+    <div class="header__desktop">
+        <div class="container">
+            <div class="header__grid">
+
+                <div class="header__wrapper">
+                    <a class="header__logo" href="/"><img src="img/logo.webp" width="285" height="60" class="img-fluid" alt=""></a>
+                    <div class="header__descr"><svg width="24" height="24"><use xlink:href="img/sprite.svg#shield-ok"></use></svg> Аккредитованное<br> частное агентство занятости</div>
+                </div>
+
+
+                <address class="header__contacts">
+
+                    <div class="header__contacts-item">
+                        <a href="mailto:tver-fobos@mail.ru" class="header__contacts-el1 header__email nowrap" title="Написать письмо"><svg width="24" height="24"><use xlink:href="img/sprite.svg#email"></use></svg> tver-fobos@mail.ru</a>
+                        <button data-fancybox data-type="ajax" data-src="forms/modal-form.html" class="header__contacts-el2 header__contacts-form seo-btn-header">Запросить предложение</button>
+                    </div>
+
+                    <div class="header__contacts-item">
+                        <button  class="header__contacts-el1 seo-btn-header" data-fancybox data-type="ajax" data-src="forms/modal-form.html"><svg width="24" height="24"><use xlink:href="img/sprite.svg#phone"></use></svg> Обратный звонок</button>
+                        <div class="header__contacts-el2">Пн.-Пт с 09:00 - 18:00</div>
+                    </div>
+
+                    <div class="header__contacts-item">
+                        <a href="tel:+79157324044" class="header__contacts-el1 header__phone nowrap" title="Позвонить">8 (903) 630-38-83</a>
+                        <div class="header__contacts-el2">Телефоны для соискателей</div>
+                    </div>
+
+                </address>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="header__mobile">
+
+        <div class="header__mobile-buttons">
+            <a class="mburger mburger--squeeze" href="#mmenu" aria-label="Меню">
+                <b></b>
+                <b></b>
+                <b></b>
+            </a>
+        </div>
+
+        <a href="/" class="header__mobile-logo">
+            <img src="img/logo.webp" width="143" height="30" class="img-fluid" alt="">
+            <!--<div class="header__mobile-logo-text">Название фирмы <br> длинное название</div>-->
+        </a>
+
+        <div class="header__mobile-buttons">
+            <a href="tel:+74951234567" onclick="yaC.reachGoal('ZVONOK');" class="header__mobile-button"><svg><use xlink:href="img/sprite.svg#phone"></use></svg></a>
+        </div>
+
+        <div class="header__mobile-button-container" data-button-name="search">
+            <div class="search-block header__mobile-search-block">
+                <form class="search-block__form" action="/search/" method="GET">
+                    <input type="search" placeholder="Поиск по сайту" name="search_query" class="form-control">
+                    <button class="search-block__button" type="submit" title='Найти'><svg class="search-block__svg"><use xlink:href="img/sprite.svg#search"></use></svg></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="mmenu-html-blocks hidden">
+            <div id="mmenu-top-buttons">
+                <a href="mailto:info@name.ru"><svg><use xlink:href="img/sprite.svg#email"></use></svg></a>
+                <a href='https://yandex.ru/maps/-/CDBSqK~a'><svg><use xlink:href="img/sprite.svg#location"></use></svg></a>
+                <button data-fancybox data-type="ajax" data-src="forms/modal-form.html"><svg><use xlink:href="img/sprite.svg#comment"></use></svg></button>
+            </div>
+
+            @@include('socials/socials-messengers.html', { "class": "socials_mobile" })
+
+            <div id="mmenu">
+                <div id="panel-menu"></div>
+            </div>
+
+        </div>
+    </div>
+</header>
+
