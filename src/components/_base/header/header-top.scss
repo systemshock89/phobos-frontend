@@ -1,9 +1,6 @@
 :root {
   // for anchor offset, menu-top offset
   --header__desktop-top-height: 40px;
-  //@media only screen and (max-width: 991px) {
-  //  --header__desktop-top-height: 63px;
-  //}
 }
 
 .header-top{
@@ -15,16 +12,20 @@
   z-index: 4;
 
   color: rgba(#fff, .7);
-  background-color: var(--color-primary-800);
-  transition: background 0.1s ease-in-out;
+
   @media only screen and (max-width: 991px) {
     display: none;
   }
+
+  animation-timeline: scroll(); // анимация при скролле
+  animation-timing-function: linear; // равномерная анимация
+  animation-fill-mode: both; // сверху вниз
+  animation-range: 0 var(--header__desktop-top-height); // глубина анимации всей сцены (с какой позиции начинаем анимацию и на какой позиции заканчиваем)
+
+  animation-name: bg-anim;
 }
 
-.header-top_bg-transparent{
-  background-color: transparent;
-}
+@keyframes bg-anim { to {background-color: var(--color-primary-800); } }
 
 .header-top__grid{
   min-height: inherit;

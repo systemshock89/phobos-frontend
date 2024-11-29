@@ -5,8 +5,8 @@
 
 .menu-top{
   flex: none;
-  background-color: var(--color-primary-800);
-  transition: background 0.1s ease-in-out;
+  //background-color: var(--color-primary-800);
+  //transition: background 0.1s ease-in-out;
   position: sticky;
   z-index: 3;
 
@@ -19,6 +19,13 @@
   // for priorityPlusMenu hide/visible
   visibility: hidden;
   height: var(--menu-top__link-height);
+
+  animation-timeline: scroll(); // анимация при скролле
+  animation-timing-function: linear; // равномерная анимация
+  animation-fill-mode: both; // сверху вниз
+  animation-range: 110px 150px; // глубина анимации всей сцены (с какой позиции начинаем анимацию и на какой позиции заканчиваем)
+
+  animation-name: bg-anim;
 }
 
 // for priorityPlusMenu hide/visible
@@ -27,10 +34,9 @@
   height: auto;
 }
 
-.menu-top_bg-transparent{
-  background-color: transparent;
-}
-
+//.menu-top_bg-transparent{
+//  background-color: transparent;
+//}
 
 .menu-top__container{
   position: relative;

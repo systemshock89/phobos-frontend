@@ -29,7 +29,6 @@ import contactsMap from "../components/contacts-where-buy/contactsMap.js";
 import contactsListMap, {selectCity} from "../components/contacts-where-buy/contactsListMap.js";
 import pagination from "../components/pagination/pagination.js";
 import yaC from "./modules/yaC.js";
-import blockBgToggle from "./modules/blockBgToggle.js";
 
 window.isMobile = document.body.classList.contains('is-mobile');
 
@@ -48,8 +47,6 @@ initSubmitForm();
 
 // main blocks
 headerContactsBtnHandle();
-blockBgToggle('header-top');
-blockBgToggle('menu-top');
 priorityPlusNav('menu-top');
 menuToggle(); // submenu-toggle
 
