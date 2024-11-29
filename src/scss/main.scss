@@ -9,3 +9,16 @@
 @import "../components/forms/form-base";
 @import "../components/forms/form-modals";
 
+// swiper
+@import 'node_modules/swiper/swiper'; // swiper core
+@import 'node_modules/swiper/modules/a11y';
+@import 'node_modules/swiper/modules/autoplay';
+@import 'node_modules/swiper/modules/navigation';
+@import 'node_modules/swiper/modules/pagination';
+@import 'node_modules/swiper/modules/thumbs';
+//@import 'node_modules/swiper/swiper-bundle.css'; // swiper full
+
+// sliders
+@import "../components/sliders/navigation";
+@import "../components/sliders/pagination";
+@import "../components/sliders/slider/slider";

@@ -1,0 +1,14 @@
+@mixin pagination {
+  .swiper-pagination-bullet{
+    --swiper-pagination-bullet-horizontal-gap: 5px; // half (margin)
+    --swiper-pagination-bullet-size: 10px;
+    --swiper-pagination-bullet-inactive-color: transparent;
+    --swiper-pagination-color: var(--color-primary-800); // active
+
+    --swiper-pagination-bullet-inactive-opacity: 1;
+    border: 1px solid var(--color-primary-800);
+    &:hover{
+      background: var(--swiper-pagination-color);
+    }
+  }
+}

@@ -1,0 +1,42 @@
+<div class="slider section">
+    <div class="swiper">
+        <div class="swiper-wrapper">
+
+            @@for (var i = 0; i < 4; i++) {
+            <div class="slider__item swiper-slide">
+                <div class="container slider__container">
+                    <div class="slider__wrapper">
+
+                        <div class="slider__text-container">
+                            <div class="slider__title">
+                                БЫСТРЫЙ ПОИСК РАБОТЫ
+                            </div>
+                            <div class="slider__text text-elements">
+                                <ul class="ul-custom">
+                                    <li>Находитесь в процессе поиска работы?</li>
+                                    <li>Планируете начать поиск работы?</li>
+                                    <li>Обновили резюме и подбираете вакансии?</li>
+                                    <li>Думаете о смене профессии?</li>
+                                </ul>
+                                <strong>Здесь Вы получите необходимую помощь</strong>
+                            </div>
+                            <a data-fancybox data-type="ajax" data-src="forms/modal-form.html" class="slider__button button">Записаться на собеседование <svg width="22" height="22"><use xlink:href="img/sprite.svg#pencil"></use></svg></a>
+                        </div>
+
+                        <div class="slider__img-container swiper-lazy" data-bg="img/slide-img.webp"></div>
+
+                    </div>
+                </div>
+            </div>
+            }
+
+        </div>
+
+        <div class="container">
+            <div class="nav-blocks">
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+    </div>
+</div>

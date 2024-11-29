@@ -284,7 +284,7 @@ address {
 то оттуда убрать стандартный стиль ul
 */
 %ul-custom{
-  --ul-custom-width: 20px;
+  --ul-custom-width: 23px;
   --ul-custom-height: 20px;
   --ul-custom-margin-right: 10px;
   --ul-custom-offset: calc(var(--ul-custom-width) + var(--ul-custom-margin-right));

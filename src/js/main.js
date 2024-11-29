@@ -14,6 +14,9 @@ import headerContactsBtnHandle from "../components/_base/header/headerContactsBt
 import menuToggle from '../components/_base/menu-top/menuToggle.js';
 import priorityPlusNav from "../components/_base/menu-top/priorityPlusNav.js";
 
+// sliders
+import slider from '../components/sliders/slider/slider.js';
+
 // modules
 import copyListenerFunc from "./modules/copyListener.js";
 import anchor from "./modules/anchor.js";
@@ -49,6 +52,9 @@ blockBgToggle('header-top');
 blockBgToggle('menu-top');
 priorityPlusNav('menu-top');
 menuToggle(); // submenu-toggle
+
+// sliders
+slider();
 
 // modules
 anchor();

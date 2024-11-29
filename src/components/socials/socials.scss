@@ -30,7 +30,9 @@
 // socials_header
 .socials_header{
   .socials__item{
-    opacity: .7;
+    svg use{
+      fill: rgba(#fff,.7)
+    }
   }
 }
 
