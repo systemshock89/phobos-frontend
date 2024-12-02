@@ -35,6 +35,24 @@
   }
 }
 
+.slider_margin{
+  .slider__text-container{
+    padding-bottom: calc(80px + var(--slider-sections-margin));
+    @media only screen and (max-width: 991px) {
+      padding-bottom: calc(60px + var(--slider-sections-margin));
+    }
+    @media only screen and (max-width: 767px) {
+      padding-bottom: calc(50px + var(--slider-sections-margin));
+    }
+  }
+  .nav-blocks {
+    bottom: calc(40px + var(--slider-sections-margin));
+    @media only screen and (max-width: 991px) {
+      bottom: calc(15px + var(--slider-sections-margin));
+    }
+  }
+}
+
 .slider__item{
   box-sizing: border-box;
   height: auto;
@@ -68,7 +86,6 @@
   }
   @media only screen and (max-width: 575px){
     grid-template-columns: minmax(0, 1fr);
-    gap: 0;
   }
 }
 

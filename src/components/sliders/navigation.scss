@@ -1,29 +1,37 @@
 @mixin navigation {
   .swiper-button-prev-custom,
   .swiper-button-next-custom{
-    --slider-button-width: 18px;
-    --slider-button-height: 30px;
+    --slider-button-width: 40px;
+    --slider-button-height: 40px;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--slider-button-width);
+    height: var(--slider-button-height);
     z-index: 10;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: var(--shadow);
     svg{
-      width: var(--slider-button-width);
-      height: var(--slider-button-height);
+      //width: var(--slider-button-width);
+      //height: var(--slider-button-height);
+      width: 24px;
+      height: 24px;
       use{
-        fill: #d2cdc7;
-        //fill: var(--color-primary-600);
-        transition: fill 0.1s ease-in-out;
+        stroke: var(--color-primary-600);
+        transition: stroke 0.1s ease-in-out;
       }
     }
     &:hover{
+      background-color: var(--color-primary-600);
       svg use{
-        //fill: var(--color-primary-800);
-        fill: var(--color-primary-600);
+        stroke: #fff;
       }
     }
     &:active{
       svg use{
-        fill: #d2cdc7;
-        //fill: var(--color-primary-600);
+        stroke: var(--color-primary-600);
       }
     }
   }

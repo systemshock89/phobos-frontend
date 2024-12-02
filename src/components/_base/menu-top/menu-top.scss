@@ -5,8 +5,6 @@
 
 .menu-top{
   flex: none;
-  //background-color: var(--color-primary-800);
-  //transition: background 0.1s ease-in-out;
   position: sticky;
   z-index: 3;
 
@@ -33,10 +31,6 @@
   visibility: visible;
   height: auto;
 }
-
-//.menu-top_bg-transparent{
-//  background-color: transparent;
-//}
 
 .menu-top__container{
   position: relative;

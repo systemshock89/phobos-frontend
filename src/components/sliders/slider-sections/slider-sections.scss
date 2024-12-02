@@ -1,0 +1,113 @@
+.slider-sections{
+
+  /* navigation */
+  @include navigation;
+
+  .swiper-button-prev-custom,
+  .swiper-button-next-custom{
+    position: absolute;
+    top: 50%;
+    margin-top: calc(-1 * var(--slider-button-height) / 2);
+  }
+  .swiper-button-prev-custom{
+    left: calc(-1 * var(--slider-button-width) - 20px);
+  }
+  .swiper-button-next-custom{
+    right: calc(-1 * var(--slider-button-width) - 20px);
+  }
+  
+  .nav-blocks{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    @media only screen and (max-width: 575px){
+      display: none;
+    }
+  }
+  /* /navigation */
+
+  /* pagination */
+  @include pagination;
+  .swiper-pagination{
+    margin-top: 5px;
+    position: relative;
+    bottom: 0;
+    display: block;
+    @media only screen and (min-width: 576px){
+     display: none;
+    }
+  }
+  /* /pagination */
+
+  // item box-shadow hack in _slider-carousel-section.scss
+}
+
+:root{
+  --slider-sections-margin: 75px;
+  @media only screen and (max-width: 1359px) {
+    --slider-sections-margin: 69px;
+  }
+  @media only screen and (max-width: 767px) {
+    --slider-sections-margin: 74px;
+  }
+  @media only screen and (max-width: 575px){
+    --slider-sections-margin: 0;
+  }
+}
+.slider-sections_margin{
+  margin-top: calc(-1 * var(--slider-sections-margin));
+  margin-bottom: calc(-1 * var(--slider-sections-margin));
+  @media only screen and (max-width: 575px){
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  z-index: 1;
+  position: relative;
+}
+
+.slider-sections-wrapper{
+  position: relative;
+  background-color: #fff;
+  padding: 15px;
+  @media only screen and (max-width: 575px){
+    padding: 10px;
+  }
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.slider-sections__item{
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  padding: 10px;
+
+  aspect-ratio: 200 / 100;
+  border-radius: 5px 5px 15px 5px;
+  background-color: var(--color-primary-600);
+
+  color: #fff;
+  font-family: 'montserrat-my', 'montserrat-my Fallback', sans-serif;
+  font-weight: 700;
+  line-height: 125%;
+  transition: background-color 0.1s ease-in-out;
+
+  &:before{
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-image: url('../img/sprite.svg#sections-arrow');
+
+    width: 21px;
+    height: 21px;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+  }
+
+  &:hover{
+    background-color: var(--color-primary-800);
+  }
+}
