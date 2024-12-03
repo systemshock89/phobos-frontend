@@ -30,7 +30,7 @@
   /* pagination */
   @include pagination;
   .swiper-pagination{
-    margin-top: 5px;
+    margin-top: 10px;
     position: relative;
     bottom: 0;
     display: block;
@@ -44,7 +44,7 @@
 }
 
 :root{
-  --slider-sections-margin: 75px;
+  --slider-sections-margin: 65px;
   @media only screen and (max-width: 1359px) {
     --slider-sections-margin: 69px;
   }
@@ -60,10 +60,27 @@
   margin-bottom: calc(-1 * var(--slider-sections-margin));
   @media only screen and (max-width: 575px){
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 0;
   }
   z-index: 1;
   position: relative;
+
+  + div{
+    padding-top: calc(var(--section-p, 100px) + var(--slider-sections-margin));
+
+    @media only screen and (max-width: 1359px) {
+      padding-top: calc(60px + var(--slider-sections-margin));
+    }
+    @media only screen and (max-width: 991px) {
+      padding-top: calc(40px + var(--slider-sections-margin))!important;
+    }
+    @media only screen and (max-width: 767px) {
+      padding-top: calc(30px + var(--slider-sections-margin))!important;
+    }
+    @media only screen and (max-width: 575px){
+      padding-top: 30px!important;
+    }
+  }
 }
 
 .slider-sections-wrapper{

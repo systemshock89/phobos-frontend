@@ -30,6 +30,7 @@
       }
     }
     &:active{
+      background-color: #fff;
       svg use{
         stroke: var(--color-primary-600);
       }

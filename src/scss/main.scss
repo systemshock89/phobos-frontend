@@ -5,6 +5,9 @@
 @import "_helpers/functions";
 @import "_base/2_fonts"; // шрифты
 
+// cards
+@import "../components/features-reputation/features-reputation";
+
 // forms
 @import "../components/forms/form-base";
 @import "../components/forms/form-modals";
@@ -23,3 +26,6 @@
 @import "../components/sliders/pagination";
 @import "../components/sliders/slider/slider";
 @import "../components/sliders/slider-sections/slider-sections";
+
+// разное
+@import "../components/reputation/reputation";
