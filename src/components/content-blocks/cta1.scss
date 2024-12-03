@@ -1,0 +1,64 @@
+.cta1{
+  .h2{
+    color: var(--color-text-400);
+    margin-bottom: 20px!important;
+  }
+}
+
+.cta1__grid{
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 420px;
+  @media only screen and (max-width: 991px) {
+    grid-template-columns: minmax(0, 1fr) 330px;
+  }
+  @media only screen and (max-width: 767px) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  gap: 15px 20px;
+  align-items: flex-start;
+}
+
+.cta1__text-container{
+  color: #fff;
+}
+
+.cta1__title{
+  font-family: 'montserrat-my', 'montserrat-my Fallback', sans-serif;
+  font-size: betterClamp(16, 18);
+  font-weight: bold;
+  line-height: 125%;
+  margin-bottom: 10px;
+}
+
+.cta1__contacts{
+  border-left: 1px dashed var(--color-line);
+  padding-left: 30px;
+  color: #FFF;
+}
+
+.cta1__contacts-title{
+  margin-top: 10px;
+  font-family: 'montserrat-my', 'montserrat-my Fallback', sans-serif;
+  font-size: betterClamp(16, 18);
+  font-weight: 700;
+  line-height: 125%;
+}
+
+.cta1__contacts-title-bold{
+  text-transform: uppercase;
+
+  position: relative;
+  &:before{
+    content: '';
+    width: 3px;
+    height: 100%;
+    background-color: var(--color-secondary-400);
+    position: absolute;
+    left: -30px;
+  }
+}
+
+.cta1__button{
+  margin-top: 20px;
+  width: 336px;
+}

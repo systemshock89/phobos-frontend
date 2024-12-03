@@ -136,7 +136,7 @@ body {
 }
 
 .section_mb-sm{
-  margin-bottom: var(--section-mb-sm, 50px);
+  margin-bottom: var(--section-mb-sm, 80px);
   @media only screen and (max-width: 1359px) {
     margin-bottom: 40px;
   }
@@ -168,8 +168,8 @@ body {
 }
 
 .section_p-sm{
-  padding-top: var(--section-p-sm, 50px);
-  padding-bottom: var(--section-p-sm, 50px);
+  padding-top: var(--section-p-sm, 80px);
+  padding-bottom: var(--section-p-sm, 80px);
   @media only screen and (max-width: 1359px) {
     padding-top: 40px;
     padding-bottom: 40px;
