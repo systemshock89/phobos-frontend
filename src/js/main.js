@@ -17,6 +17,7 @@ import priorityPlusNav from "../components/_base/menu-top/priorityPlusNav.js";
 // sliders
 import slider from '../components/sliders/slider/slider.js';
 import sliderSections from '../components/sliders/slider-sections/slider-sections.js';
+import sliderSectionCarouselFunc from "../components/sliders/slider-carousel-section/slider-carousel-section.js";
 
 // modules
 import copyListenerFunc from "./modules/copyListener.js";
@@ -54,6 +55,7 @@ menuToggle(); // submenu-toggle
 // sliders
 slider();
 sliderSections();
+sliderSectionCarouselFunc();
 
 // modules
 anchor();

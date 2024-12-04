@@ -14,8 +14,6 @@
     background-color: #fff;
     box-shadow: var(--shadow);
     svg{
-      //width: var(--slider-button-width);
-      //height: var(--slider-button-height);
       width: 24px;
       height: 24px;
       use{
@@ -40,30 +38,4 @@
   .swiper-button-next-custom{
     transform: scale(-1, 1);
   }
-
-  //.swiper-button-prev-custom,
-  //.swiper-button-next-custom{
-  //  z-index: 10;
-  //  svg{
-  //    width: 18px;
-  //    height: 30px;
-  //    use{
-  //      fill: var(--color-text-800);
-  //      transition: fill 0.1s ease-in-out;
-  //    }
-  //  }
-  //  &:hover{
-  //    svg use{
-  //      fill: var(--color-primary-600);
-  //    }
-  //  }
-  //  &:active{
-  //    svg use{
-  //      fill: var(--color-text-800);
-  //    }
-  //  }
-  //}
-  //.swiper-button-next-custom{
-  //  transform: scale(-1, 1)
-  //}
 }

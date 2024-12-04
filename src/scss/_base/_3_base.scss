@@ -277,6 +277,10 @@ body {
 
 .section_bg{
   background-position: top center;
+}
+
+.section_bg,
+.section_bgc{
   position: relative;
   z-index: 0;
 }

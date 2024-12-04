@@ -1,0 +1,96 @@
+.section_slider-carousel{
+  .swiper-slide{
+    box-sizing: border-box;
+    height: auto;
+  }
+
+  .grid,
+  .grid-flex,
+  .swiper:not(.swiper-initialized){
+    display: none;
+  }
+  
+  .swiper-container{
+    position: relative;
+  }
+
+  /* nav buttons */
+  @include navigation;
+
+  .swiper-button-prev-custom,
+  .swiper-button-next-custom{
+    position: absolute;
+    top: 50%;
+    margin-top: calc(-1 * var(--slider-button-height) / 2);
+    @media only screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+  .swiper-button-prev-custom{
+    left: -30px;
+  }
+  .swiper-button-next-custom{
+    right: -30px;
+  }
+  &.gallery-fw{
+    .swiper-button-prev-custom{
+      left: 30px;
+    }
+    .swiper-button-next-custom{
+      right: 30px;
+    }
+  }
+  /* /nav buttons */
+
+  /* pagination */
+  @include pagination;
+  .swiper-pagination{
+    @media only screen and (min-width: 768px) {
+      display: none;
+    }
+
+    margin-top: 10px;
+    position: relative;
+    bottom: 0;
+  }
+  /* /pagination */
+
+  /* item box-shadow hack (overflow: clip) */
+  &.vacancies-list,
+  &.slider-carousel_item-box-shadow{
+    --slider-shadow-padding-left: 15px;
+    @media only screen and (max-width: 767px) {
+      --slider-shadow-padding-left: 10px;
+    }
+
+    // растушевку тени сократить примерно до 15px
+    .vacancies-list__item-wrapper{
+      box-shadow: 0 4px 15px rgba(0, 65, 130, 0.25);
+      &:hover{
+        box-shadow: 0 4px 5px rgba(0, 65, 130, 0.25);
+      }
+
+      @media only screen and (max-width: 767px) {
+        box-shadow: 0 4px 4px rgba(0, 65, 130, 0.25)!important;
+      }
+    }
+
+    .swiper {
+      width: calc(100% + var(--slider-shadow-padding-left) * 2);
+      padding: 0 var(--slider-shadow-padding-left);
+      margin-left: calc(-1 * var(--slider-shadow-padding-left));
+      overflow: initial;
+      overflow-x: clip;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-prev-custom{
+      left: calc(-80px + var(--slider-shadow-padding-left));
+    }
+    .swiper-button-next,
+    .swiper-button-next-custom{
+      right: calc(-80px + var(--slider-shadow-padding-left));
+    }
+  }
+  /* /item box-shadow hack (overflow: clip) */
+}
