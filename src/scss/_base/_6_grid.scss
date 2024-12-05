@@ -137,7 +137,8 @@ $gap-sm: var(--gap-sm, var(--gap, 15px));
 
 // gap
 .grid,
-.grid-flex{
+.grid-flex,
+.offices__grid{
   // xxl
   @media only screen and (min-width: 1930px) {
     gap: $gap-xxl;
