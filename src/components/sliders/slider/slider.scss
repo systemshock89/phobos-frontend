@@ -66,12 +66,14 @@
   flex-direction: column;
   justify-content: center;
   @media only screen and (max-width: 575px){
+    justify-content: flex-start;
     padding-left: 0;
     padding-right: 0;
   }
 }
 
 .slider__wrapper{
+  flex-grow: 1;
   aspect-ratio: 1290 / 650;
   width: 100%; // to disable iphone bug
   display: grid;
@@ -86,6 +88,7 @@
   }
   @media only screen and (max-width: 575px){
     grid-template-columns: minmax(0, 1fr);
+    align-items: flex-end;
   }
 }
 
@@ -96,9 +99,6 @@
   @media only screen and (max-width: 1359px) {
   	gap: 20px;
   }
-  @media only screen and (max-width: 767px) {
-    gap: 10px;
-  }
 
   padding-top: 80px;
   padding-bottom: 80px;
@@ -107,11 +107,13 @@
     padding-bottom: 60px;
   }
   @media only screen and (max-width: 767px) {
+    gap: 10px;
     padding-top: 50px;
     padding-bottom: 50px;
   }
   @media only screen and (max-width: 575px){
     padding: 15px;
+    align-items: center;
   }
 }
 
