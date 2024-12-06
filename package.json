@@ -61,7 +61,7 @@
     "mmenu-js": "^9.3.0",
     "modern-normalize": "^3.0.0",
     "priority-plus": "^1.5.1",
-    "swiper": "^11.1.9",
+    "swiper": "^11.1.15",
     "vanilla-lazyload": "^19.1.3"
   }
 }

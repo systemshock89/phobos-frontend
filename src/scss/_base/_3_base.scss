@@ -288,9 +288,9 @@ body {
 
 [data-bg]:not(.loaded),// временный фон, пока не загрузилась фоновая картинка
 [data-vbg]:not(.youtube-background){ // если плагин youtube-background не подключен
-  background-color: #EEEEEE;
+  //background-color: #EEEEEE;
   &.section_dark {
-    background-color: #BBBBBB;
+    background-color: var(--color-primary-800);
   }
 }
 

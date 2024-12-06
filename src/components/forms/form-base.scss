@@ -163,19 +163,19 @@ $checkbox-color-checked: var(--color-primary-600);
 
 // radio
 $radio-color: #6e6e6e; // for custom
-$radio-color-checked: var(--color-primary-600);
+$radio-color-checked: var(--color-secondary-400);
 
 .radio{
-  --radio-width: 18px;
-  --radio-height: 18px;
+  --radio-width: 20px;
+  --radio-height: 20px;
 
   display: flex;
   align-items: center;
   gap: 10px;
   line-height: 1.1;
-  &:not(:last-child){
-    margin-bottom: 15px;
-  }
+  //&:not(:last-child){
+  //  margin-bottom: 15px;
+  //}
 }
 .radio__input{
   width: var(--radio-width);
@@ -190,11 +190,12 @@ $radio-color-checked: var(--color-primary-600);
   .radio__ico{
     width: var(--radio-width);
     height: var(--radio-height);
-    border: 2px solid $radio-color;
+    border: 1px solid $radio-color;
+    background-color: var(--color-secondary-100);
     &:before{
       background-color: $radio-color;
-      width: 10px;
-      height: 10px;
+      width: 14px;
+      height: 14px;
 
       border-radius: 50%;
       content: '';
@@ -223,7 +224,8 @@ $radio-color-checked: var(--color-primary-600);
       }
     }
     &:checked:not(:disabled) + .radio__ico{
-      border: 2px solid $radio-color-checked;
+      border: 1px solid $radio-color-checked;
+      background-color: #fff;
       &:before{
         background-color: $radio-color-checked;
       }
@@ -259,6 +261,13 @@ $radio-color-checked: var(--color-primary-600);
   grid-template-columns: 25% minmax(0, 1fr);
   .form__feedback{
     grid-column: 2 / -1;
+  }
+}
+
+.form__field_text{
+  display: block;
+  span{
+    color: var(--color-text-400);
   }
 }
 

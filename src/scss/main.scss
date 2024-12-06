@@ -19,6 +19,7 @@
 @import 'node_modules/swiper/modules/navigation';
 @import 'node_modules/swiper/modules/pagination';
 @import 'node_modules/swiper/modules/thumbs';
+@import 'node_modules/swiper/modules/effect-fade';
 //@import 'node_modules/swiper/swiper-bundle.css'; // swiper full
 
 // sliders
@@ -27,6 +28,7 @@
 @import "../components/sliders/slider/slider";
 @import "../components/sliders/slider-sections/slider-sections";
 @import "../components/sliders/slider-carousel-section/slider-carousel-section";
+@import "../components/sliders/slider-form/slider-form";
 
 // cta
 @import "../components/content-blocks/cta1";

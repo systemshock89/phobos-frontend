@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination, A11y, Autoplay } from 'swiper/modules';
+import { Pagination, A11y, Autoplay } from 'swiper/modules';
 
 function slider(){
   document.querySelectorAll('.slider').forEach(slider => {
