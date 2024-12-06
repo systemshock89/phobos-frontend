@@ -13,7 +13,7 @@ function lazyLoad(){
 
     // without use_native (false)
     const lazyLoadInstance2 = new LazyLoad({
-        elements_selector: ".section_bg, .img-container-bg, .slider__img-container, .slider-bg__wrapper, .slider-bg-fw__item, .cta2__img"
+        elements_selector: ".section_bg, .img-container-bg, .slider__img-container, .slider-bg__wrapper, .slider-bg-fw__item, .cta2__img, .features-bg__item"
     });
 }
 export default lazyLoad;

@@ -6,7 +6,10 @@
 @import "_base/2_fonts"; // шрифты
 
 // cards
+@import "../components/features-bg/features-bg";
 @import "../components/features-reputation/features-reputation";
+@import "../components/reputation/reputation";
+@import "../components/vacancies-list/vacancies-list";
 
 // forms
 @import "../components/forms/form-base";
@@ -36,6 +39,4 @@
 @import "../components/content-blocks/cta3";
 
 // разное
-@import "../components/reputation/reputation";
-@import "../components/vacancies-list/vacancies-list";
 @import "../components/offices/offices";
