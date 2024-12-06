@@ -62,16 +62,6 @@ body {
 
 }
 
-.page__offset-top{
-  margin-top: 40px;
-  @media only screen and (max-width: 991px) {
-    margin-top: 30px;
-  }
-  @media only screen and (max-width: 575px) {
-    margin-top: 20px;
-  }
-}
-
 .main{
   flex: 1 0 auto;
 }
@@ -81,10 +71,11 @@ body {
 
   display: grid;
   grid-template-areas: "aside main";
-  gap: 0 30px;
-  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 0 40px;
+  grid-template-columns: 290px minmax(0, 1fr);
   @media only screen and (max-width: 1359px) {
     grid-template-columns: 210px minmax(0, 1fr);
+    gap: 0 30px;
   }
   @media only screen and (max-width: 991px){
     grid-template-columns: minmax(0, 1fr);

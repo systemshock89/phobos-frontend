@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    @@include('_base/header/head.html', {
+    "title": "Catalog",
+    "description": "description"
+    })
+
+</head>
+
+<body>
+
+<div class="page">
+
+    @@include('_base/header/header.html')
+
+    @@include('_base/menu-top/menu-top.html')
+
+    @@include('_base/breadcrumbs/breadcrumbs.html')
+
+    <div class="title-wrapper title-wrapper_page text-center container">
+        <h1>ОТКРЫТЫЕ ВАКАНСИИ В ТВЕРИ</h1>
+    </div>
+
+    <div class="container page__two-columns">
+
+        <main class="main">
+
+            @@include('content-blocks/cta3.html')
+
+            @@include('vacancies-list/vacancies-list.html')
+
+        </main>
+
+        @@include('_base/aside.html')
+
+    </div>
+
+    <div class="page__sections-bottom">
+
+        @@include('content-blocks/cta2.html')
+        @@include('features-bg/features-bg.html')
+        @@include('offices/offices.html')
+
+    </div>
+
+    @@include('_base/footer/footer.html')
+
+</div>
+
+@@include('_base/widgets.html')
+
+@@include('_base/footer/scripts.html')
+
+</body>
+</html>

@@ -10,7 +10,7 @@
   text-overflow: ellipsis;
   overflow-x: clip;
 
-  margin-bottom: 35px;
+  margin-bottom: 40px;
   @media only screen and (max-width: 1359px) {
     margin-bottom: 30px;
   }
@@ -83,7 +83,7 @@ h6, .h6{
   color: var(--color-text-800);
   text-wrap: balance;
 
-  margin-top: -15px;
+  margin-top: -20px;
   @media only screen and (max-width: 1359px) {
     margin-top: -10px;
   }
@@ -94,7 +94,7 @@ h6, .h6{
     margin-top: -.5rem;
   }
 
-  margin-bottom: 35px;
+  margin-bottom: 40px;
   @media only screen and (max-width: 1359px) {
     margin-bottom: 30px;
   }
@@ -183,6 +183,13 @@ address {
     }
   }
 }
+
+@media only screen and (max-width: 767px) {
+  .title-wrapper_page{
+    margin-top: 15px;
+  }
+}
+
 
 
 /* ФОРМАТИРОВАНИЕ ТЕКСТА И ЭЛЕМЕНТОВ В ТЕКСТЕ */
