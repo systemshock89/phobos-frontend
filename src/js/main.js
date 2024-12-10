@@ -13,6 +13,7 @@ import initSubmitForm from "../components/forms/forms.js";
 import headerContactsBtnHandle from "../components/_base/header/headerContactsBtnHandle.js";
 import menuToggle from '../components/_base/menu-top/menuToggle.js';
 import priorityPlusNav from "../components/_base/menu-top/priorityPlusNav.js";
+import tagsInit from "../components/tags/tags.js";
 
 // sliders
 import slider from '../components/sliders/slider/slider.js';
@@ -52,6 +53,7 @@ initSubmitForm();
 headerContactsBtnHandle();
 priorityPlusNav('menu-top');
 menuToggle(); // submenu-toggle
+tagsInit();
 
 // sliders
 slider();
