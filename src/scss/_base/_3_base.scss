@@ -79,11 +79,11 @@ body {
   }
   @media only screen and (max-width: 991px){
     grid-template-columns: minmax(0, 1fr);
-    grid-template-areas: "main" "aside";
+    grid-template-areas: "aside" "main";
   }
   body.is-mobile &{
     grid-template-columns: minmax(0, 1fr);
-    grid-template-areas: "main" "aside";
+    grid-template-areas: "aside" "main";
   }
 
   .main{
@@ -97,10 +97,10 @@ body {
 
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px;
 
-  @media only screen and (max-width: 991px) {
-    display: none;
+  @media only screen and (max-width: 1359px) {
+    gap: 30px;
   }
   @media only screen and (max-width: 575px) {
     gap: 15px;

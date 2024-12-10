@@ -1,0 +1,30 @@
+.aside-form{
+  padding: 30px 15px 15px;
+  color: #fff;
+  border-radius: 10px;
+  @media only screen and (max-width: 991px) {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1360px) {
+  .aside-form__text-container{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+.aside-form__title{
+  font-family: 'montserrat-my', 'montserrat-my Fallback', sans-serif;
+  font-size: betterClamp(16, 18);
+  font-weight: 700;
+  line-height: 125%;
+}
+
+.aside-form__text{
+  margin-top: 10px;
+}
+
+.aside-form__button{
+  margin-top: 18px;
+}
