@@ -32,3 +32,41 @@
 .cta3__button{
   justify-self: center;
 }
+
+.page__two-columns{
+  .cta3{
+    padding: 30px 35px;
+    @media only screen and (max-width: 767px) {
+      padding: 20px;
+    }
+    border-radius: 10px;
+  }
+
+  .cta3__grid{
+    aspect-ratio: inherit;
+    @media only screen and (max-width: 991px) {
+      grid-template-columns: minmax(0, auto) minmax(0, 1fr);
+    }
+    @media only screen and (max-width: 767px) {
+      grid-template-columns: minmax(0, 1fr);
+      text-align: center;
+    }
+  }
+
+  .cta3__title{
+    font-weight: 700;
+    font-size: betterClamp(18, 29);
+    margin-bottom: 0!important;
+  }
+
+  .cta3__title2{
+    font-size: betterClamp(14, 18);
+  }
+
+  .cta3__button{
+    justify-self: self-end;
+    @media only screen and (max-width: 991px) {
+      justify-self: center;
+    }
+  }
+}
