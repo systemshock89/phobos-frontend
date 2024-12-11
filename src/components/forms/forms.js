@@ -5,7 +5,7 @@ import loadScript from "../../js/modules/loadScript.js";
 
 const setupFancyboxForm = () => {
     try {
-        Fancybox.bind("[data-fancybox]:where(.button, .button2)", {
+        Fancybox.bind("[data-fancybox]:where(.button, .button2, .button3, .button4)", {
             dragToClose: !window.isMobile, // bug: click to button misses on mobile
             on: {
                 reveal: (fancybox, slide) => {
