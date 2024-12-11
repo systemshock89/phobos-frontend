@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    @@include('_base/header/head.html', {
+    "title": "Вакансия",
+    "description": "description"
+    })
+
+</head>
+
+<body>
+
+<div class="page">
+
+    @@include('_base/header/header.html')
+
+    @@include('_base/menu-top/menu-top.html')
+
+    @@include('_base/breadcrumbs/breadcrumbs.html')
+
+    <div class="main">
+
+        @@include('vacancy/vacancy.html')
+        @@include('content-blocks/cta1.html')
+        @@include('content-blocks/cta2.html')
+
+    </div>
+
+    @@include('_base/footer/footer.html')
+
+</div>
+
+@@include('_base/widgets.html')
+
+@@include('_base/footer/scripts.html')
+
+</body>
+</html>

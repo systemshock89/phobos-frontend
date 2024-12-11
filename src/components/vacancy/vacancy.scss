@@ -1,0 +1,165 @@
+.vacancy{
+
+}
+
+.vacancy__flex-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.vacancy__grid{
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  @media only screen and (max-width: 575px){
+    grid-template-columns: minmax(0, 1fr);
+  }
+  align-items: center;
+  gap: 15px 30px;
+  justify-content: space-between;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px 30px 10px 10px;
+  @media only screen and (max-width: 991px) {
+    padding-right: 10px;
+  }
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  background-color: #fff;
+
+  position: relative;
+  &:before{
+    content: '';
+    width: calc(100% - 40px);
+    height: calc(100% + 20px);
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    border-radius: 10px;
+    background-color: var(--color-primary-600);
+    z-index: -1;
+  }
+}
+
+.vacancy__grid2{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+  gap: 15px 30px;
+  justify-content: space-between;
+  @media only screen and (max-width: 1359px) {
+  	grid-column: 1/-1;
+    order:-1;
+  }
+  @media only screen and (max-width: 991px) {
+    gap: 15px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  @media only screen and (max-width: 767px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @media only screen and (max-width: 575px){
+    grid-template-columns: minmax(0, 1fr);
+    order: 0;
+  }
+}
+
+.vacancy__img{
+  border-radius: 10px;
+  @media only screen and (max-width: 575px){
+  	justify-self: center;
+  }
+}
+
+.vacancy__item{
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.vacancy__item-title{
+  color: var(--color-text-200);
+}
+
+.vacancy__item-text{
+  margin-top: 10px;
+  @media only screen and (max-width: 991px) {
+    margin-top: 5px;
+  }
+}
+
+.vacancy__phone{
+  color: var(--color-text-600);
+  &:hover{
+    color: var(--color-text-400);
+  }
+}
+
+.vacancy__button{
+  justify-self: flex-end;
+  @media only screen and (max-width: 575px){
+  	justify-self: center;
+  }
+}
+
+.vacancy__text{
+  margin-top: 40px;
+  border-radius: 10px;
+  padding: 40px 12px 35px 40px;
+  background-color: var(--color-secondary-200);
+  box-shadow: var(--shadow);
+  @media only screen and (max-width: 1359px) {
+    margin-top: 30px;
+    padding: 30px 12px 30px 30px;
+  }
+  @media only screen and (max-width: 991px) {
+    padding: 20px 12px 20px 20px;
+  }
+
+  b, strong{
+    font-family: 'montserrat-my', 'montserrat-my Fallback', sans-serif;
+    font-weight: 700;
+    line-height: 125%;
+    font-size: betterClamp(16, 18);
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+
+  p:not(:last-child){
+    margin-bottom: 30px;
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.vacancy__phone-wrapper{
+  margin-left: -40px;
+  margin-right: -12px;
+  background-color: var(--color-secondary-100);
+  padding: 10px 12px 10px 40px;
+  @media only screen and (max-width: 1359px) {
+    margin-left: -30px;
+    padding: 10px 12px 10px 30px;
+  }
+  @media only screen and (max-width: 991px) {
+    margin-left: -20px;
+    padding: 10px 12px 10px 20px;
+    min-height: 50px;
+  }
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-family: 'montserrat-my', 'montserrat-my Fallback', sans-serif;
+  font-weight: 700;
+  line-height: 125%;
+  font-size: betterClamp(16, 18);
+}
+
+.vacancy__phone2{
+  color: var(--color-text-600);
+  &:hover{
+    color: var(--color-text-400);
+  }
+}
