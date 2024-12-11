@@ -14,6 +14,7 @@ import headerContactsBtnHandle from "../components/_base/header/headerContactsBt
 import menuToggle from '../components/_base/menu-top/menuToggle.js';
 import priorityPlusNav from "../components/_base/menu-top/priorityPlusNav.js";
 import tagsInit from "../components/tags/tags.js";
+import filterButtonToggle from "../components/_base/filter/filter.js";
 
 // sliders
 import slider from '../components/sliders/slider/slider.js';
@@ -54,6 +55,7 @@ headerContactsBtnHandle();
 priorityPlusNav('menu-top');
 menuToggle(); // submenu-toggle
 tagsInit();
+filterButtonToggle();
 
 // sliders
 slider();

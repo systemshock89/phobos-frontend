@@ -1,0 +1,60 @@
+<div class="filter">
+    <button class="button filter__button-toggle">Фильтр</button>
+    <form class="filter__wrapper">
+        <div class="filter__container">
+            <div class="filter__title">Должность</div>
+
+            <select class="form-control filter__select">
+                <option disabled selected>Выбрать</option>
+                <option>Опция 1</option>
+                <option>Опция 2</option>
+                <option>Опция 3</option>
+            </select>
+        </div>
+
+        <div class="filter__container">
+            <div class="filter__title">Опыт работы</div>
+
+            <label class="checkbox checkbox_custom">
+                <input type="checkbox" class="checkbox__input" checked>
+                <span class="checkbox__ico"><svg><use xlink:href="img/sprite.svg#check"></use></svg></span>
+                Без опыта
+            </label>
+            <label class="checkbox checkbox_custom">
+                <input type="checkbox" class="checkbox__input">
+                <span class="checkbox__ico"><svg><use xlink:href="img/sprite.svg#check"></use></svg></span>
+                От полугода
+            </label>
+        </div>
+
+        <div class="filter__container">
+            <div class="filter__title">Тип занятости</div>
+
+            <label class="checkbox checkbox_custom">
+                <input type="checkbox" class="checkbox__input" checked>
+                <span class="checkbox__ico"><svg><use xlink:href="img/sprite.svg#check"></use></svg></span>
+                Полная занятость
+            </label>
+            <label class="checkbox checkbox_custom">
+                <input type="checkbox" class="checkbox__input">
+                <span class="checkbox__ico"><svg><use xlink:href="img/sprite.svg#check"></use></svg></span>
+                Сменный график
+            </label>
+            <label class="checkbox checkbox_custom">
+                <input type="checkbox" class="checkbox__input">
+                <span class="checkbox__ico"><svg><use xlink:href="img/sprite.svg#check"></use></svg></span>
+                Работа вахтой
+            </label>
+            <label class="checkbox checkbox_custom">
+                <input type="checkbox" class="checkbox__input">
+                <span class="checkbox__ico"><svg><use xlink:href="img/sprite.svg#check"></use></svg></span>
+                Подработка
+            </label>
+        </div>
+
+        <div class="filter_buttons">
+            <button class="button filter__button" type="submit">Подобрать вакансии</button>
+            <button class="button3 filter__button-reset" type="reset">Сбросить параметры</button>
+        </div>
+    </form>
+</div>
