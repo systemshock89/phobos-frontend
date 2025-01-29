@@ -26,8 +26,8 @@ import html from "./gulp-tasks/html.js";
 import copyAssets from "./gulp-tasks/assets.js";
 import cms from './gulp-tasks/cms.js';
 import serve from "./gulp-tasks/serve.js";
-import ftpSite, {ftpCmsTask, ftpWikiTask} from './gulp-tasks/ftp.js';
-import deployTask, {deployAllTask, /*deployNetcatFilesTask,*/ deployTemplateTask, deployFrontendTask} from './gulp-tasks/rsync.js';
+// import ftpSite, {ftpCmsTask, ftpWikiTask} from './gulp-tasks/ftp.js';
+// import deployTask, {deployAllTask, /*deployNetcatFilesTask,*/ deployTemplateTask, deployFrontendTask} from './gulp-tasks/rsync.js';
 import zipTask from "./gulp-tasks/zip.js";
 import versionTask, {versionNoneTask} from "./gulp-tasks/version.js";
 
@@ -41,14 +41,14 @@ async function clearProdTask() {
 
 export const clearDist = clearDistTask;
 export const clearProd = clearProdTask;
-export const deploy = deployTask;
-export const deployTemplate = deployTemplateTask;
-export const deployAll = deployAllTask;
+// export const deploy = deployTask;
+// export const deployTemplate = deployTemplateTask;
+// export const deployAll = deployAllTask;
 // export const deployNetcatFiles = deployNetcatFilesTask;
 export const deployFrontend = deployFrontendTask;
-export const ftp = ftpSite;
-export const ftpCms = ftpCmsTask;
-export const ftpWiki = ftpWikiTask;
+// export const ftp = ftpSite;
+// export const ftpCms = ftpCmsTask;
+// export const ftpWiki = ftpWikiTask;
 export const img = images;
 export const zip = zipTask;
 export const version = versionTask;
