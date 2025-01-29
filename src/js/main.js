@@ -74,7 +74,7 @@ observerMap();
 contactsMap();
 contactsListMap(); // карта в "Где купить" со всеми объектами
 selectCity();
-if (onAjaxPagination) pagination();
+// if (onAjaxPagination) pagination();
 yaC(); // get Ya.Metrika id (for reachGoal)
 
 
