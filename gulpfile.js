@@ -18,7 +18,7 @@ import concat from 'gulp-concat';
 import debug from "gulp-debug";
 
 import scripts from './gulp-tasks/scripts.js';
-import styles/*, {injectCriticalCSS}*/ from './gulp-tasks/styles.js';
+import styles, {injectCriticalCSS} from './gulp-tasks/styles.js';
 import images from "./gulp-tasks/images.js";
 import sprites from "./gulp-tasks/sprites.js";
 import favicons from "./gulp-tasks/favicons.js";
@@ -54,5 +54,5 @@ export const zip = zipTask;
 export const version = versionTask;
 export const versionNone = versionNoneTask;
 export const build = parallel(series(html, styles), scripts, copyAssets, favicons, sprites, images);
-export const prod = series(isProd, parallel(clearDist, clearProd), build, /*version, injectCriticalCSS , */ cms);
+export const prod = series(isProd, parallel(clearDist, clearProd), build, /* version, */ injectCriticalCSS, cms);
 export default (!proxy ? series(build, serve) : series(build, cms, serve));

@@ -86,14 +86,14 @@ function stylesMain() {
 
 function replaceCriticalCSSLink() {
     if(production){
-        src('./netcat_template/template/main/partials/critical.html')
-            .pipe(replace(/.+/gs, '<!-- inject-css css/critical.min.css -->'))
-            // .pipe(replace('<link rel="stylesheet" href="css/critical.min.css">', '<!-- inject-css css/critical.min.css -->'))
-            .pipe(dest('./netcat_template/template/main/partials'));
+        // src('./netcat_template/template/main/partials/critical.html')
+        //     .pipe(replace(/.+/gs, '<!-- inject-css css/critical.min.css -->'))
+        //     // .pipe(replace('<link rel="stylesheet" href="css/critical.min.css">', '<!-- inject-css css/critical.min.css -->'))
+        //     .pipe(dest('./netcat_template/template/main/partials'));
 
         // для injectCSS кладем critical.min.css в /netcat_template/template/main/partials/css
-        src(dist + '/css/critical.min.css')
-            .pipe(dest('./netcat_template/template/main/partials/css'));
+        // src(dist + '/css/critical.min.css')
+        //     .pipe(dest('./netcat_template/template/main/partials/css'));
 
         return src(dist + '/*.html')
             .pipe(replace('<link rel="stylesheet" href="css/critical.min.css">', '<!-- inject-css css/critical.min.css -->'))
@@ -109,19 +109,19 @@ function replaceCriticalCSSLink() {
 }
 
 function injectCriticalCSS() {
-    src('./netcat_template/template/main/partials/critical.html')
-        .pipe(injectCSS())
-        .pipe(dest('./netcat_template/template/main/partials'));
+    // src('./netcat_template/template/main/partials/critical.html')
+    //     .pipe(injectCSS())
+    //     .pipe(dest('./netcat_template/template/main/partials'));
 
     return src(dist + '/*.html')
         .pipe(injectCSS())
         .pipe(dest(dist))
-        .on('end', async function() {
-            await deleteAsync('./netcat_template/template/main/partials/css/', { force: true });
-        });
+        // .on('end', async function() {
+        //     await deleteAsync('./netcat_template/template/main/partials/css/', { force: true });
+        // });
 }
 
-const styles = series(stylesMain /*, replaceCriticalCSSLink */);
+const styles = series(stylesMain, replaceCriticalCSSLink);
 
 export default styles;
 export {injectCriticalCSS};
