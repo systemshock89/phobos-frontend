@@ -121,7 +121,7 @@ function injectCriticalCSS() {
         });
 }
 
-const styles = series(stylesMain, replaceCriticalCSSLink);
+const styles = series(stylesMain /*, replaceCriticalCSSLink */);
 
 export default styles;
 export {injectCriticalCSS};
