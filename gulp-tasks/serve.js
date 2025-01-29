@@ -1,7 +1,7 @@
 "use strict";
 
-import settings from "./_settings.js";
-const proxy = settings().proxy;
+// import settings from "./_settings.js";
+const proxy = '';
 
 import { dist, production } from "../gulpfile.js";
 import scripts from "./scripts.js";
