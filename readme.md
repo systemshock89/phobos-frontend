@@ -1,5 +1,13 @@
-<h1>Starter cms</h1>
-<p>used Gulp + Webpack</p>
+<h1>Recruitment agency frontend</h1>
+
+<p><a href="https://systemshock89.github.io/phobos-frontend/">See demo</a></p>
+
+<h2>Pages</h2>
+<ul>
+    <li><a target="_blank" href="https://systemshock89.github.io/phobos-frontend/">Index Page</a></li>
+    <li><a target="_blank" href="https://systemshock89.github.io/phobos-frontend/catalog.html">Catalog</a></li>
+    <li><a target="_blank" href="https://systemshock89.github.io/phobos-frontend/vacancy.html">Vacancy</a></li>
+</ul>
 
 <h2>Tasks</h2>
 <ul>
