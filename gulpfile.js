@@ -1,8 +1,8 @@
 "use strict";
 
-import settings from "./gulp-tasks/_settings.js";
+// import settings from "./gulp-tasks/_settings.js";
 
-const proxy = settings().proxy;
+const proxy = null;
 export const dist = "./dist";
 
 export let production;
@@ -54,5 +54,5 @@ export const zip = zipTask;
 export const version = versionTask;
 export const versionNone = versionNoneTask;
 export const build = parallel(series(html, styles), scripts, copyAssets, favicons, sprites, images);
-export const prod = series(isProd, parallel(clearDist, clearProd), build, version, injectCriticalCSS, cms);
+export const prod = series(isProd, parallel(clearDist, clearProd), build, /*version,*/ injectCriticalCSS, cms);
 export default (!proxy ? series(build, serve) : series(build, cms, serve));
